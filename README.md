@@ -154,6 +154,7 @@ To make a release:
 1. Run `uv version --bump major|minor|patch`.
 2. Move the entries under "Unreleased" in `CHANGELOG.md` to a section for the new version.
 3. Commit, then add the tag `vX.Y.Z`.
+4. Push the commit and the tag. The release workflow checks that the tag is the version in `pyproject.toml`, then publishes the package to PyPI.
 
 ### Layout
 

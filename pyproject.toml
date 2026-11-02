@@ -20,6 +20,11 @@ classifiers = [
     "Topic :: Text Processing :: Markup :: XML",
 ]
 
+[project.urls]
+Repository = "https://github.com/alyf-de/ubl-bindings"
+Changelog = "https://github.com/alyf-de/ubl-bindings/blob/main/CHANGELOG.md"
+Issues = "https://github.com/alyf-de/ubl-bindings/issues"
+
 [dependency-groups]
 dev = [
     "pytest>=8.0",

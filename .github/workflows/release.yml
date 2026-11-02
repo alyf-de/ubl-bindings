@@ -1,0 +1,21 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  pypi:
+    runs-on: ubuntu-latest
+    # PyPI trusts this workflow and this environment. See "Trusted Publishing" on pypi.org.
+    environment: pypi
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.3.3
+      - name: Check that the tag is the version in pyproject.toml
+        run: test "${GITHUB_REF_NAME#v}" = "$(uv version --short)"
+      - run: uv build --no-sources
+      - run: uv publish --trusted-publishing always
