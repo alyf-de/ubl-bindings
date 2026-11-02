@@ -6,10 +6,10 @@ Python data bindings for all [UBL](https://www.oasis-open.org/committees/ubl/) d
 
 ## Why this library
 
-- **All document types.** UBL 2.1 has 65 document types and UBL 2.5 has 101. All of them are supported, not only the **Invoice** and the **Credit Note**. This includes, for example, **Order**, **Despatch Advice** and **Catalogue**.
+- **All document types.** UBL 2.1 has 65 document types and UBL 2.5 has 101. All of them have classes, not only the **Invoice** and the **Credit Note**. This includes, for example, **Order**, **Despatch Advice** and **Catalogue**.
 - **All current releases.** UBL 2.1, 2.2, 2.3, 2.4 and 2.5 are supported. To add a release, generate its code and run the tests.
 - **Complete.** Each element and attribute of the schemas has a field in a class. Data that a hand-written model does not know is not lost.
-- **Tested with the official examples.** Each example document of each release is parsed, exported, validated and compared with the input.
+- **Tested with the official examples.** Each example document of each release is parsed, exported, validated and compared with the input. The examples cover about half of the document types, for example 56 of 101 in UBL 2.5.
 - **XSD validation included.** The schemas are part of the package.
 - **No profile rules.** The library does not add the rules of Peppol, XRechnung or EN 16931. You can build such rules on top of it.
 
@@ -191,6 +191,11 @@ The main test is a round trip over the official examples. For each release and e
 4. Compare the output with the input. The comparison ignores differences in the lexical form of a value and the `xsi:schemaLocation` attribute.
 
 Each new release brings its own examples. Thus the test suite grows without new test code.
+
+Other tests:
+
+- `tests/test_api.py` tests the public functions.
+- `tests/test_readme.py` runs the example in "Write a document" and validates the result.
 
 ## License
 
