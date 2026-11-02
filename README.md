@@ -154,7 +154,7 @@ ubl-bindings/
 │   └── v2_5/             # generated code for UBL 2.5
 ├── .xsdata.xml           # generator configuration
 ├── scripts/
-│   └── generate.py       # runs the generator for one release
+│   └── generate.py       # runs the generator for one or all releases
 ├── tests/
 │   └── examples/         # example documents from each release ZIP
 └── docs/adr/             # architecture decision records
@@ -170,6 +170,11 @@ Rules for this layout:
 We use [xsdata](https://xsdata.readthedocs.io/) to make Python dataclasses from the XSD schemas. See [ADR 0001](docs/adr/0001-code-generator.md). xsdata makes one module for each XML namespace. All document types of a release share these modules.
 
 The version of xsdata in the `dev` dependency group is pinned. To update it, change the pin, generate the code for all releases and review the diff.
+
+```sh
+uv run scripts/generate.py 2.5   # generate the code for one release
+uv run scripts/generate.py       # generate the code for all releases
+```
 
 ### Add a new UBL release
 
@@ -196,6 +201,8 @@ Other tests:
 
 - `tests/test_api.py` tests the public functions.
 - `tests/test_readme.py` runs the example in "Write a document" and validates the result.
+
+The CI workflow runs the tests on the oldest supported and the latest Python version. It also generates the code for all releases again and fails if the result is not the committed code.
 
 ## License
 

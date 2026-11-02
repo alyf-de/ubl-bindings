@@ -1,6 +1,8 @@
-"""Generate the bindings for one UBL release.
+"""Generate the bindings for UBL releases.
 
-Usage: uv run scripts/generate.py 2.5
+Usage:
+    uv run scripts/generate.py 2.5   # one release
+    uv run scripts/generate.py       # all releases in ubl_bindings.RELEASES
 
 Reads  src/ubl_bindings/schemas/<release>/xsd/maindoc/
 Writes src/ubl_bindings/v<major>_<minor>/
@@ -11,6 +13,8 @@ import subprocess
 import sys
 import tempfile
 from pathlib import Path
+
+from ubl_bindings import RELEASES
 
 ROOT = Path(__file__).resolve().parent.parent
 PACKAGE_DIR = ROOT / "src" / "ubl_bindings"
@@ -59,6 +63,5 @@ def run_xsdata(source_dir: Path, package: str, cwd: str) -> None:
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        sys.exit(__doc__)
-    main(sys.argv[1])
+    for release in sys.argv[1:] or RELEASES:
+        main(release)
