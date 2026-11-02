@@ -25,7 +25,9 @@ The classes are close to the schemas. Thus the API is more verbose than the API 
 | 2.4     | OASIS Standard | 93             | `ubl_bindings.v2_4`    | [UBL-2.4.html](https://docs.oasis-open.org/ubl/UBL-2.4.html) |
 | 2.5     | OASIS Standard | 101            | `ubl_bindings.v2_5`    | [UBL-2.5.html](https://docs.oasis-open.org/ubl/UBL-2.5.html) |
 
-UBL 2.0 is not supported. Each release from 2.1 on can read UBL 2.0 documents.
+UBL 2.0 has no package of its own. Each release from 2.1 on can read UBL 2.0 documents. The tests do this with the official 2.0 examples. To write a UBL 2.0 document, do not use elements that were added after 2.0. `validate()` cannot do a check against the 2.0 schemas.
+
+UBL 1.0 is not supported. It uses different namespaces and a different structure. See [ADR 0004](docs/adr/0004-ubl-1.0-and-2.0.md).
 
 ## Installation
 
@@ -119,6 +121,8 @@ ubl_bindings.detect_version("invoice.xml")  # "2.1", or None if the element is m
 
 The value stays the same, but the text can change. For example, `12:00:01.000` becomes `12:00:01` and `0` becomes `false`. Thus an XML signature on an exported document is not valid. To check a signature, use the original bytes.
 
+Export also removes the `xsi:schemaLocation` attribute. This attribute is only a hint for tools.
+
 ## Out of scope
 
 - Business rules that are not in the XSD schemas, for example EN 16931, XRechnung or Peppol Schematron rules.
@@ -179,12 +183,12 @@ The version of xsdata in the `dev` dependency group is pinned. To update it, cha
 
 ### Tests
 
-The main test is a round trip over the official examples. For each release and each example of the same or an older release, the test does these steps:
+The main test is a round trip over the official examples. For each release and each example of the same or an older release, the test does these steps. The UBL 2.0 examples count as an older release.
 
 1. Parse the example.
 2. Export the result to XML.
 3. Validate the output against the XSD schemas of the release.
-4. Compare the output with the input. The comparison ignores differences in the lexical form of a value.
+4. Compare the output with the input. The comparison ignores differences in the lexical form of a value and the `xsi:schemaLocation` attribute.
 
 Each new release brings its own examples. Thus the test suite grows without new test code.
 

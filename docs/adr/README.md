@@ -11,8 +11,9 @@ This folder contains the architecture decision records (ADR) of this project. An
 
 ## Records
 
-| No.  | Title                                             | Status   |
-| ---- | ------------------------------------------------- | -------- |
-| 0001 | [Code generator: xsdata](0001-code-generator.md)  | Accepted |
-| 0002 | [Build tool: uv with uv_build](0002-build-tool.md) | Accepted |
-| 0003 | [Project name: ubl-bindings](0003-project-name.md) | Accepted |
+| No.  | Title                                                          | Status   |
+| ---- | -------------------------------------------------------------- | -------- |
+| 0001 | [Code generator: xsdata](0001-code-generator.md)               | Accepted |
+| 0002 | [Build tool: uv with uv_build](0002-build-tool.md)             | Accepted |
+| 0003 | [Project name: ubl-bindings](0003-project-name.md)             | Accepted |
+| 0004 | [No packages for UBL 1.0 and UBL 2.0](0004-ubl-1.0-and-2.0.md) | Accepted |

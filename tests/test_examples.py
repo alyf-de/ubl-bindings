@@ -1,6 +1,7 @@
 """Round trip over the official example documents of each UBL release.
 
 Each release reads its own examples and the examples of all older releases.
+UBL 2.0 has no bindings, but each release must read its examples.
 """
 
 import re
@@ -13,6 +14,8 @@ import ubl_bindings
 
 EXAMPLES_DIR = Path(__file__).parent / "examples"
 XMLDSIG = "http://www.w3.org/2000/09/xmldsig#"
+SCHEMA_LOCATION = "{http://www.w3.org/2001/XMLSchema-instance}schemaLocation"
+UNSUPPORTED_RELEASES = ("2.0",)
 
 
 def ubl_examples(release: str) -> list[Path]:
@@ -27,7 +30,7 @@ def ubl_examples(release: str) -> list[Path]:
 def round_trip_cases() -> list:
     cases = []
     for index, release in enumerate(ubl_bindings.RELEASES):
-        for example_release in ubl_bindings.RELEASES[: index + 1]:
+        for example_release in UNSUPPORTED_RELEASES + ubl_bindings.RELEASES[: index + 1]:
             for path in ubl_examples(example_release):
                 case_id = f"{release}-reads-{example_release}/{path.name}"
                 cases.append(pytest.param(release, path, id=case_id))
@@ -50,9 +53,14 @@ def content_lines(xml: bytes) -> list[str]:
     """One line for each element: path, attributes and normalized text."""
     tree = etree.fromstring(xml).getroottree()
     return [
-        f"{tree.getelementpath(element)} {sorted(element.attrib.items())} {normalize_text(element)!r}"
+        f"{tree.getelementpath(element)} {content_attributes(element)} {normalize_text(element)!r}"
         for element in tree.iter(etree.Element)
     ]
+
+
+def content_attributes(element: etree._Element) -> list[tuple[str, str]]:
+    # xsi:schemaLocation is only a hint for tools. xsdata does not keep it.
+    return sorted((name, value) for name, value in element.attrib.items() if name != SCHEMA_LOCATION)
 
 
 def normalize_text(element: etree._Element) -> str:
