@@ -18,4 +18,8 @@ jobs:
       - name: Check that the tag is the version in pyproject.toml
         run: test "${GITHUB_REF_NAME#v}" = "$(uv version --short)"
       - run: uv build --no-sources
+      # Sign each file with the GitHub OIDC identity (PEP 740). This writes
+      # dist/<file>.publish.attestation, which uv publish uploads with the file.
+      - name: Make the PyPI provenance attestations
+        run: uvx --from pypi-attestations==0.0.31 pypi-attestations sign dist/*
       - run: uv publish --trusted-publishing always
