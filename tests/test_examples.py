@@ -14,6 +14,7 @@ import ubl_bindings
 
 EXAMPLES_DIR = Path(__file__).parent / "examples"
 XMLDSIG = "http://www.w3.org/2000/09/xmldsig#"
+UBL_NAMESPACE_PREFIX = "urn:oasis:names:specification:ubl:schema:xsd:"
 SCHEMA_LOCATION = "{http://www.w3.org/2001/XMLSchema-instance}schemaLocation"
 UNSUPPORTED_RELEASES = ("2.0",)
 
@@ -23,7 +24,7 @@ def ubl_examples(release: str) -> list[Path]:
     return [
         path
         for path in sorted((EXAMPLES_DIR / release).glob("*.xml"))
-        if etree.parse(str(path)).getroot().tag.startswith("{" + ubl_bindings.UBL_NAMESPACE_PREFIX)
+        if etree.parse(str(path)).getroot().tag.startswith("{" + UBL_NAMESPACE_PREFIX)
     ]
 
 

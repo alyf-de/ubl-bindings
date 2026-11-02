@@ -10,6 +10,7 @@ All notable changes to this project are in this file. The format is [Keep a Chan
 
 ### Changed
 
+- **Breaking:** The public API is the names in `ubl_bindings.__all__`: `parse()`, `validate()`, `to_xml()`, `detect_version()`, `RELEASES` and `LATEST`, plus the generated classes. The helpers, the class `Release` and the constants `UBL_NAMESPACE_PREFIX`, `CBC` and `PREFIXES` are private now.
 - **Breaking:** `parse()`, `validate()` and `detect_version()` take XML as `bytes` only. They do not read files. A `str` raises `TypeError`. Before, a `str` was a file path.
 - **Breaking:** `to_xml()` returns UTF-8 encoded `bytes`. Before, it returned `str`. Now its output can go directly into `parse()` and `validate()`.
 - **Breaking:** `parse()` is strict by default. It raises `ValueError` for an unknown attribute or a value that cannot be converted. Before, it skipped unknown attributes and kept such values as strings.

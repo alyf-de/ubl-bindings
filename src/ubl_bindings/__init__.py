@@ -17,15 +17,17 @@ from xsdata.formats.dataclass.parsers.config import ParserConfig
 from xsdata.formats.dataclass.serializers import XmlSerializer
 from xsdata.formats.dataclass.serializers.config import SerializerConfig
 
+__all__ = ["LATEST", "RELEASES", "detect_version", "parse", "to_xml", "validate"]
+
 RELEASES = ("2.1", "2.2", "2.3", "2.4", "2.5")
 LATEST = RELEASES[-1]
 
-UBL_NAMESPACE_PREFIX = "urn:oasis:names:specification:ubl:schema:xsd:"
-CBC = UBL_NAMESPACE_PREFIX + "CommonBasicComponents-2"
-PREFIXES = {
-    "cac": UBL_NAMESPACE_PREFIX + "CommonAggregateComponents-2",
-    "cbc": CBC,
-    "ext": UBL_NAMESPACE_PREFIX + "CommonExtensionComponents-2",
+_UBL_NAMESPACE_PREFIX = "urn:oasis:names:specification:ubl:schema:xsd:"
+_CBC = _UBL_NAMESPACE_PREFIX + "CommonBasicComponents-2"
+_PREFIXES = {
+    "cac": _UBL_NAMESPACE_PREFIX + "CommonAggregateComponents-2",
+    "cbc": _CBC,
+    "ext": _UBL_NAMESPACE_PREFIX + "CommonExtensionComponents-2",
 }
 
 
@@ -40,29 +42,29 @@ def parse(xml: bytes, release: str = LATEST, strict: bool = True):
     strict=False parses as much as possible. A missing mandatory element becomes None. Unknown
     elements and attributes are skipped. A value that cannot be converted stays a string.
     """
-    return Release(release).parse(xml, strict)
+    return _Release(release).parse(xml, strict)
 
 
 def validate(xml: bytes, release: str = LATEST) -> list[str]:
     """Validate a UBL document against the XSD schemas. Return the errors."""
-    return Release(release).validate(xml)
+    return _Release(release).validate(xml)
 
 
 def to_xml(document) -> bytes:
     """Export a document to UTF-8 encoded XML, with the usual UBL namespace prefixes."""
     document_namespace = type(document).Meta.namespace
     serializer = XmlSerializer(config=SerializerConfig(indent="  "))
-    xml = serializer.render(document, ns_map={None: document_namespace, **PREFIXES})
+    xml = serializer.render(document, ns_map={None: document_namespace, **_PREFIXES})
     return xml.encode()
 
 
 def detect_version(xml: bytes) -> str | None:
     """Return the value of cbc:UBLVersionID, or None if the document has none."""
-    version_id = parse_root(xml).findtext(f"{{{CBC}}}UBLVersionID")
+    version_id = _parse_root(xml).findtext(f"{{{_CBC}}}UBLVersionID")
     return version_id.strip() if version_id else None
 
 
-class Release:
+class _Release:
     """The generated classes and the XSD schemas of one UBL release."""
 
     def __init__(self, version: str):
@@ -74,13 +76,13 @@ class Release:
         self.schema_dir = Path(__file__).parent / "schemas" / version / "xsd"
 
     def parse(self, xml: bytes, strict: bool):
-        document_name = etree.QName(parse_root(xml)).localname
+        document_name = etree.QName(_parse_root(xml)).localname
         document_class = getattr(self.bindings, document_name)
-        config = STRICT if strict else BEST_EFFORT
+        config = _STRICT if strict else _BEST_EFFORT
         return XmlParser(config=config).from_bytes(xml, document_class)
 
     def validate(self, xml: bytes) -> list[str]:
-        root = parse_root(xml)
+        root = _parse_root(xml)
         schema = self.schema(etree.QName(root).localname)
         if schema.validate(root):
             return []
@@ -88,24 +90,24 @@ class Release:
         return [str(error) for error in schema.error_log]
 
     def schema(self, document_name: str) -> etree.XMLSchema:
-        return load_schema(self.schema_dir / "maindoc" / f"UBL-{document_name}-{self.version}.xsd")
+        return _load_schema(self.schema_dir / "maindoc" / f"UBL-{document_name}-{self.version}.xsd")
 
 
-def parse_root(xml: bytes) -> etree._Element:
+def _parse_root(xml: bytes) -> etree._Element:
     # Without this check, lxml would read a path or text as broken XML, with a confusing error.
     if not isinstance(xml, bytes):
         raise TypeError(f"Expected XML as bytes, got {type(xml).__name__}. Read files with Path.read_bytes().")
 
     root = etree.fromstring(xml)
-    if not root.tag.startswith("{" + UBL_NAMESPACE_PREFIX):
+    if not root.tag.startswith("{" + _UBL_NAMESPACE_PREFIX):
         raise ValueError(f"Not a UBL document. Root element: {root.tag}")
 
     return root
 
 
-def create_strict(cls: type, params: dict):
+def _create_strict(cls: type, params: dict):
     """Create an instance. Raise ValueError if a mandatory field is missing."""
-    missing = [describe(field) for field in missing_fields(cls, params)]
+    missing = [_describe(field) for field in _missing_fields(cls, params)]
     if missing:
         raise ValueError(
             f"{cls.__name__} misses the mandatory {', '.join(missing)}. "
@@ -115,13 +117,13 @@ def create_strict(cls: type, params: dict):
     return cls(**params)
 
 
-def create_best_effort(cls: type, params: dict):
+def _create_best_effort(cls: type, params: dict):
     """Create an instance. Set missing mandatory fields to None."""
-    missing = {field.name: None for field in missing_fields(cls, params)}
+    missing = {field.name: None for field in _missing_fields(cls, params)}
     return cls(**params, **missing)
 
 
-def missing_fields(cls: type, params: dict) -> list[dataclasses.Field]:
+def _missing_fields(cls: type, params: dict) -> list[dataclasses.Field]:
     return [
         field
         for field in dataclasses.fields(cls)
@@ -132,7 +134,7 @@ def missing_fields(cls: type, params: dict) -> list[dataclasses.Field]:
     ]
 
 
-def describe(field: dataclasses.Field) -> str:
+def _describe(field: dataclasses.Field) -> str:
     # The generated fields store the XML name and node type. The text content of an element has neither.
     if "name" not in field.metadata:
         return "text value"
@@ -140,18 +142,18 @@ def describe(field: dataclasses.Field) -> str:
     return f"{field.metadata['type'].lower()} {field.metadata['name']}"
 
 
-STRICT = ParserConfig(
-    class_factory=create_strict,
+_STRICT = ParserConfig(
+    class_factory=_create_strict,
     fail_on_unknown_attributes=True,
     fail_on_converter_warnings=True,
 )
-BEST_EFFORT = ParserConfig(
-    class_factory=create_best_effort,
+_BEST_EFFORT = ParserConfig(
+    class_factory=_create_best_effort,
     fail_on_unknown_properties=False,
 )
 
 
 @cache
-def load_schema(path: Path) -> etree.XMLSchema:
+def _load_schema(path: Path) -> etree.XMLSchema:
     # Loading a UBL schema takes about a second, so we keep each one.
     return etree.XMLSchema(etree.parse(str(path)))
