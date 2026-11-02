@@ -1,114 +1,120 @@
-# python-ubl
+# ubl-bindings
 
-A Python library to read, write and validate [OASIS UBL](https://www.oasis-open.org/committees/ubl/) documents.
+Python data bindings for all [UBL](https://www.oasis-open.org/committees/ubl/) document types. The classes are generated from the official XSD schemas. Use them to read, write and validate UBL documents.
 
-> **Status:** early design. This README describes the plan. Nothing is implemented yet.
+> **Status:** alpha. The API can change.
 
-## Goals
+## Why this library
 
-- Support all document types of each supported UBL release, not only the **Invoice**.
-- Generate the code from the official XSD schemas. Do not write the data classes by hand.
-- Add a new UBL release with one command and a test run.
-- Keep the generated code in the repository, so that users do not need the generator.
+- **All document types.** UBL 2.1 has 65 document types and UBL 2.5 has 101. All of them are supported, not only the **Invoice** and the **Credit Note**. This includes, for example, **Order**, **Despatch Advice** and **Catalogue**.
+- **More than one release.** UBL 2.1 and UBL 2.5 are supported. To add a release, generate its code and run the tests.
+- **Complete.** Each element and attribute of the schemas has a field in a class. Data that a hand-written model does not know is not lost.
+- **Tested with the official examples.** Each example document of each release is parsed, exported, validated and compared with the input.
+- **XSD validation included.** The schemas are part of the package.
+- **No profile rules.** The library does not add the rules of Peppol, XRechnung or EN 16931. You can build such rules on top of it.
+
+The classes are close to the schemas. Thus the API is more verbose than the API of a hand-written model for one document type.
 
 ## Supported UBL releases
 
-| Release | Status          | Document types | Specification                                               |
-| ------- | --------------- | -------------- | ----------------------------------------------------------- |
-| 2.1     | OASIS Standard  | 65             | [UBL-2.1.html](https://docs.oasis-open.org/ubl/UBL-2.1.html) |
-| 2.5     | OASIS Standard  | 101            | [UBL-2.5.html](https://docs.oasis-open.org/ubl/UBL-2.5.html) |
+| Release | Status         | Document types | Python package         | Specification                                                |
+| ------- | -------------- | -------------- | ---------------------- | ------------------------------------------------------------ |
+| 2.1     | OASIS Standard | 65             | `ubl_bindings.v2_1`    | [UBL-2.1.html](https://docs.oasis-open.org/ubl/UBL-2.1.html) |
+| 2.5     | OASIS Standard | 101            | `ubl_bindings.v2_5`    | [UBL-2.5.html](https://docs.oasis-open.org/ubl/UBL-2.5.html) |
 
 Other 2.x releases (2.2, 2.3, 2.4) use the same process. We add them when a user needs them.
 
-## Background: UBL versions and namespaces
+## Installation
 
-All UBL 2.x releases use the same XML namespaces, for example `urn:oasis:names:specification:ubl:schema:xsd:Invoice-2`. The namespace does not tell you the minor version.
-
-A document can state its version in the optional `cbc:UBLVersionID` element. If this element is missing, the library cannot know the version from the XML alone.
-
-Each minor release is backward compatible. A valid UBL 2.1 document is also valid against the UBL 2.5 schemas. But a UBL 2.5 document can contain elements that UBL 2.1 does not know.
-
-Because of this, the library keeps one separate package for each release. The caller selects the release. A helper reads `cbc:UBLVersionID` when the caller does not know the release.
-
-## Planned layout
-
-```
-python-ubl/
-├── src/ubl/
-│   ├── __init__.py       # version detection and shared helpers (hand-written)
-│   ├── schemas/
-│   │   ├── 2.1/xsd/      # XSD files, copied from the official release ZIP
-│   │   └── 2.5/xsd/
-│   ├── v2_1/             # generated code for UBL 2.1
-│   └── v2_5/             # generated code for UBL 2.5
-├── .xsdata.xml           # generator configuration
-├── scripts/
-│   └── generate.py       # runs the generator for one release
-└── tests/
-    └── examples/         # official example documents from each release ZIP
+```sh
+pip install ubl-bindings
 ```
 
-Rules for this layout:
+The library supports Python 3.10 and later.
 
-- Code in `src/ubl/v*/` is generated. Do not edit it by hand. Change the generator or its configuration, then generate again.
-- Hand-written code stays in `src/ubl/__init__.py` and a small number of modules next to it.
-- Each `src/ubl/schemas/<release>/` folder contains only the files that the generator and the validator need. The schemas are part of the package, because `ubl.validate()` reads them at runtime. The full release ZIP also contains PDF, HTML and code list files. We do not keep these.
+## Usage
 
-## Code generation
-
-We use [xsdata](https://xsdata.readthedocs.io/) to make Python dataclasses from the XSD schemas. xsdata also parses XML into these dataclasses and exports them to XML. [ADR 0001](docs/adr/0001-code-generator.md) compares xsdata with generateDS.
-
-The UBL schemas share many common files, for example `UBL-CommonAggregateComponents-2.xsd` and `UBL-CommonBasicComponents-2.xsd`. xsdata makes one module for each XML namespace. All document types of a release use these shared modules.
-
-### Add a new UBL release
-
-1. Download the release ZIP from `https://docs.oasis-open.org/ubl/os-UBL-<release>/UBL-<release>.zip`.
-2. Copy the `xsd/` folder of the ZIP to `src/ubl/schemas/<release>/xsd/`.
-3. Copy the `xml/` folder of the ZIP to `tests/examples/<release>/`.
-4. Run `uv run scripts/generate.py <release>`.
-5. Run the tests.
-6. Add the release to the table in this README.
-
-## Planned usage
-
-The API below is a draft. Names can change when we see the generated code.
+### Read a document
 
 ```python
-from xsdata.formats.dataclass.parsers import XmlParser
-from xsdata.formats.dataclass.serializers import XmlSerializer
+import ubl_bindings
 
-from ubl.v2_5 import Invoice
+invoice = ubl_bindings.parse("invoice.xml")
 
-invoice = XmlParser().parse("invoice.xml", Invoice)
-print(invoice.id.value)
-
-xml = XmlSerializer().render(invoice)
+print(invoice.id.value)                                  # "TOSL108"
+print(invoice.legal_monetary_total.payable_amount.value) # Decimal("729")
 ```
 
-Detect the release of an unknown document:
+`parse()` returns an instance of the class for the root element, for example `Invoice` or `Order`. By default it uses the latest release. Each release can read the documents of all older 2.x releases.
+
+To use a specific release:
 
 ```python
-import ubl
-
-release = ubl.detect_version("invoice.xml")  # "2.1", "2.5" or None
+invoice = ubl_bindings.parse("invoice.xml", release="2.1")
 ```
 
-Validate a document against the XSD schemas of a release:
+### Write a document
 
 ```python
-ubl.validate("invoice.xml", release="2.1")
+from decimal import Decimal
+
+from xsdata.models.datatype import XmlDate
+
+import ubl_bindings
+from ubl_bindings.v2_5 import (
+    AccountingCustomerParty,
+    AccountingSupplierParty,
+    Id,
+    Invoice,
+    InvoiceLine,
+    IssueDate,
+    Item,
+    LegalMonetaryTotal,
+    LineExtensionAmount,
+    PayableAmount,
+)
+
+invoice = Invoice(
+    id=Id(value="INV-1"),
+    issue_date=IssueDate(value=XmlDate(2026, 11, 2)),
+    accounting_supplier_party=AccountingSupplierParty(),
+    accounting_customer_party=AccountingCustomerParty(),
+    legal_monetary_total=LegalMonetaryTotal(
+        payable_amount=PayableAmount(value=Decimal("100.00"), currency_id="EUR"),
+    ),
+    invoice_line=[
+        InvoiceLine(
+            id=Id(value="1"),
+            line_extension_amount=LineExtensionAmount(value=Decimal("100.00"), currency_id="EUR"),
+            item=Item(),
+        ),
+    ],
+)
+
+xml = ubl_bindings.to_xml(invoice)
 ```
 
-## Tests
+`to_xml()` uses the usual prefixes `cac`, `cbc` and `ext`.
 
-The main test is a round trip over the official examples of each release:
+### Validate a document
 
-1. Parse each example file with the generated code.
-2. Export the result to XML.
-3. Validate the output against the XSD schemas of the same release.
-4. Compare the output with the input.
+```python
+errors = ubl_bindings.validate("invoice.xml")  # [] if the document is valid
+```
 
-Each new release brings its own examples. Thus the test suite grows without new test code.
+The validation uses the XSD schemas only. It does not check business rules.
+
+### Find the release of a document
+
+All UBL 2.x releases use the same XML namespaces. A document can state its release in the optional `cbc:UBLVersionID` element:
+
+```python
+ubl_bindings.detect_version("invoice.xml")  # "2.1", or None if the element is missing
+```
+
+### Export changes the form of some values
+
+The value stays the same, but the text can change. For example, `12:00:01.000` becomes `12:00:01` and `0` becomes `false`. Thus an XML signature on an exported document is not valid. To check a signature, use the original bytes.
 
 ## Out of scope
 
@@ -118,18 +124,69 @@ Each new release brings its own examples. Thus the test suite grows without new 
 
 ## Development
 
-The library supports Python 3.10 and later.
-
-We use [uv](https://docs.astral.sh/uv/) for the environment, the build and the publication. See [ADR 0002](docs/adr/0002-build-tool.md).
+We use [uv](https://docs.astral.sh/uv/). See [ADR 0002](docs/adr/0002-build-tool.md).
 
 ```sh
-uv sync      # make the environment
-uv run ...   # run a command in the environment
-uv build     # make the wheel and the source distribution
+uv sync         # make the environment
+uv run pytest   # run the tests
+uv build        # make the wheel and the source distribution
 ```
+
+### Layout
+
+```
+ubl-bindings/
+├── src/ubl_bindings/
+│   ├── __init__.py       # parse, validate, to_xml, detect_version (hand-written)
+│   ├── schemas/
+│   │   ├── 2.1/xsd/      # XSD files from the official release ZIP
+│   │   └── 2.5/xsd/
+│   ├── v2_1/             # generated code for UBL 2.1
+│   └── v2_5/             # generated code for UBL 2.5
+├── .xsdata.xml           # generator configuration
+├── scripts/
+│   └── generate.py       # runs the generator for one release
+├── tests/
+│   └── examples/         # example documents from each release ZIP
+└── docs/adr/             # architecture decision records
+```
+
+Rules for this layout:
+
+- Code in `src/ubl_bindings/v*/` is generated. Do not edit it by hand. Change the generator configuration, then generate again.
+- The schemas are part of the package, because `validate()` reads them at runtime. We keep only the `xsd/` folder of each release ZIP.
+
+### Code generation
+
+We use [xsdata](https://xsdata.readthedocs.io/) to make Python dataclasses from the XSD schemas. See [ADR 0001](docs/adr/0001-code-generator.md). xsdata makes one module for each XML namespace. All document types of a release share these modules.
+
+The version of xsdata in the `dev` dependency group is pinned. To update it, change the pin, generate the code for all releases and review the diff.
+
+### Add a new UBL release
+
+1. Download the release ZIP from `https://docs.oasis-open.org/ubl/os-UBL-<release>/UBL-<release>.zip`.
+2. Copy the `xsd/` folder of the ZIP to `src/ubl_bindings/schemas/<release>/xsd/`.
+3. Copy the `xml/` folder of the ZIP to `tests/examples/<release>/`.
+4. Add the release to `RELEASES` in `src/ubl_bindings/__init__.py`.
+5. Run `uv run scripts/generate.py <release>`.
+6. Run `uv run pytest`.
+7. Add the release to the table in this README.
+
+### Tests
+
+The main test is a round trip over the official examples. For each release and each example of the same or an older release, the test does these steps:
+
+1. Parse the example.
+2. Export the result to XML.
+3. Validate the output against the XSD schemas of the release.
+4. Compare the output with the input. The comparison ignores differences in the lexical form of a value.
+
+Each new release brings its own examples. Thus the test suite grows without new test code.
 
 ## License
 
 The code of this project is licensed under the [MIT License](LICENSE).
 
 The UBL schemas, the UBL examples and the code generated from them come from OASIS, W3C and ETSI. Their own licenses apply. See [NOTICE](NOTICE).
+
+"OASIS", "UBL" and "Universal Business Language" are trademarks of OASIS, the open standards consortium where the UBL specification is owned and developed. UBL is a copyrighted © work of OASIS Open. All rights reserved. This project is not an official OASIS product.
