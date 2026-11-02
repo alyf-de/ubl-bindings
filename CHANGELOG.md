@@ -17,6 +17,7 @@ All notable changes to this project are in this file. The format is [Keep a Chan
 ### Fixed
 
 - `parse()` raises `ValueError` with the name of the missing element if a mandatory element is missing. Before, it raised `TypeError`.
+- The links in the README work on PyPI. Before, they were relative to the repository.
 
 ## [0.1.0] - 2026-11-02
 

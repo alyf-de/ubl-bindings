@@ -15,6 +15,13 @@ def test_written_document_is_valid():
     assert ubl_bindings.validate(namespace["xml"]) == []
 
 
+def test_links_are_absolute():
+    # PyPI shows the README without the repository, so relative links break there.
+    links = re.findall(r"\]\(([^)]+)\)", README.read_text())
+
+    assert [link for link in links if not link.startswith(("https://", "#"))] == []
+
+
 def readme_code(heading: str) -> str:
     section = README.read_text().split(f"### {heading}\n", 1)[1]
     return re.search(r"```python\n(.*?)```", section, re.DOTALL).group(1)

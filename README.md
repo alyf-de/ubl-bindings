@@ -27,7 +27,7 @@ The classes are close to the schemas. Thus the API is more verbose than the API 
 
 UBL 2.0 has no package of its own. Each release from 2.1 on can read UBL 2.0 documents. The tests do this with the official 2.0 examples. To write a UBL 2.0 document, do not use elements that were added after 2.0. `validate()` cannot do a check against the 2.0 schemas.
 
-UBL 1.0 is not supported. It uses different namespaces and a different structure. See [ADR 0004](docs/adr/0004-ubl-1.0-and-2.0.md).
+UBL 1.0 is not supported. It uses different namespaces and a different structure. See [ADR 0004](https://github.com/alyf-de/ubl-bindings/blob/main/docs/adr/0004-ubl-1.0-and-2.0.md).
 
 ## Installation
 
@@ -154,7 +154,7 @@ Export also removes the `xsi:schemaLocation` attribute. This attribute is only a
 
 ## Development
 
-We use [uv](https://docs.astral.sh/uv/). See [ADR 0002](docs/adr/0002-build-tool.md).
+We use [uv](https://docs.astral.sh/uv/). See [ADR 0002](https://github.com/alyf-de/ubl-bindings/blob/main/docs/adr/0002-build-tool.md).
 
 ```sh
 uv sync                 # make the environment
@@ -164,11 +164,11 @@ uv run ruff check       # find lint errors
 uv build                # make the wheel and the source distribution
 ```
 
-The ruff configuration is in `pyproject.toml`. See [ADR 0005](docs/adr/0005-code-style.md).
+The ruff configuration is in `pyproject.toml`. See [ADR 0005](https://github.com/alyf-de/ubl-bindings/blob/main/docs/adr/0005-code-style.md).
 
 ### Versioning
 
-We use [Semantic Versioning](https://semver.org/). A renamed generated class or field is a breaking change. A new UBL release is a minor change. See [ADR 0006](docs/adr/0006-versioning.md).
+We use [Semantic Versioning](https://semver.org/). A renamed generated class or field is a breaking change. A new UBL release is a minor change. See [ADR 0006](https://github.com/alyf-de/ubl-bindings/blob/main/docs/adr/0006-versioning.md).
 
 To make a release:
 
@@ -205,7 +205,7 @@ Rules for this layout:
 
 ### Code generation
 
-We use [xsdata](https://xsdata.readthedocs.io/) to make Python dataclasses from the XSD schemas. See [ADR 0001](docs/adr/0001-code-generator.md). xsdata makes one module for each XML namespace. All document types of a release share these modules.
+We use [xsdata](https://xsdata.readthedocs.io/) to make Python dataclasses from the XSD schemas. See [ADR 0001](https://github.com/alyf-de/ubl-bindings/blob/main/docs/adr/0001-code-generator.md). xsdata makes one module for each XML namespace. All document types of a release share these modules.
 
 The version of xsdata in the `dev` dependency group is pinned. To update it, change the pin, generate the code for all releases and review the diff.
 
@@ -244,8 +244,8 @@ The CI workflow runs the tests on the oldest supported and the latest Python ver
 
 ## License
 
-The code of this project is licensed under the [MIT License](LICENSE).
+The code of this project is licensed under the [MIT License](https://github.com/alyf-de/ubl-bindings/blob/main/LICENSE).
 
-The UBL schemas, the UBL examples and the code generated from them come from OASIS, W3C and ETSI. Their own licenses apply. See [NOTICE](NOTICE).
+The UBL schemas, the UBL examples and the code generated from them come from OASIS, W3C and ETSI. Their own licenses apply. See [NOTICE](https://github.com/alyf-de/ubl-bindings/blob/main/NOTICE).
 
 "OASIS", "UBL" and "Universal Business Language" are trademarks of OASIS, the open standards consortium where the UBL specification is owned and developed. UBL is a copyrighted © work of OASIS Open. All rights reserved. This project is not an official OASIS product.
