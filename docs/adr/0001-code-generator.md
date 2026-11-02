@@ -93,7 +93,7 @@ We use xsdata.
 
 - The library has a runtime dependency on xsdata. xsdata parses and exports the generated dataclasses.
 - Export changes the lexical form of some values (see above). The values do not change. But a changed document has a different byte sequence, so an XML signature on it is no longer valid. To verify a signature, use the original bytes.
-- All UBL 2.x releases use the same namespaces. Thus each release needs its own Python package, for example `ubl.v2_1` and `ubl.v2_5`. We set this with the `Package` option for each release.
-- With "namespaces" as the structure, import paths are long, for example `ubl.v2_1.oasis.names.specification.ubl.schema.xsd.invoice_2`. Short imports can come later from hand-written modules.
+- All UBL 2.x releases use the same namespaces. Thus each release needs its own Python package, for example `ubl_bindings.v2_1` and `ubl_bindings.v2_5`. We set this with the `Package` option for each release.
+- With "namespaces" as the structure, import paths are long, for example `ubl_bindings.v2_1.oasis.names.specification.ubl.schema.xsd.invoice_2`. Short imports can come later from hand-written modules.
 - A new xsdata version can change the generated code. We update xsdata on purpose, generate the code again and review the diff.
 - The round trip from the experiment becomes the main test of the test suite.

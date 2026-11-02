@@ -10,7 +10,7 @@ The project needs two tools:
 - A build backend. It makes the wheel and the source distribution from `pyproject.toml`.
 - A workflow tool. It manages the virtual environment, the dependencies and the publication to PyPI.
 
-The library is pure Python. It contains generated code and the UBL XSD schemas. The function `ubl.validate()` reads the schemas at runtime. Thus the schemas must be in the wheel.
+The library is pure Python. It contains generated code and the UBL XSD schemas. The function `ubl_bindings.validate()` reads the schemas at runtime. Thus the schemas must be in the wheel.
 
 ## Options
 
@@ -32,12 +32,12 @@ Workflow tools:
 
 We use uv as the workflow tool and uv_build as the build backend.
 
-We keep the schemas inside the package, at `src/ubl/schemas/<release>/xsd/`. Thus uv_build puts them into the wheel without extra configuration.
+We keep the schemas inside the package, at `src/ubl_bindings/schemas/<release>/xsd/`. Thus uv_build puts them into the wheel without extra configuration.
 
 ## Consequences
 
 - One tool for the full workflow: `uv sync`, `uv run`, `uv build` and `uv publish`.
 - `pyproject.toml` uses only standard fields and the `[tool.uv]` sections.
 - The schemas are next to the code that reads them. The library finds them relative to its own files.
-- Each release adds its schemas (about 5 MB uncompressed) to the wheel.
+- Each release adds its schemas (5 to 7 MB uncompressed) to the wheel.
 - If we need a file layout that uv_build does not support, we change the backend to hatchling. This change does not affect the workflow with uv.
