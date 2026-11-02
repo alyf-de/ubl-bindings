@@ -23,6 +23,15 @@ jobs:
       - run: uv sync --locked
       - run: uv run pytest
 
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.3.3
+      - run: uv sync --locked
+      - run: uv run ruff check
+      - run: uv run ruff format --check
+
   generated-code:
     runs-on: ubuntu-latest
     steps:

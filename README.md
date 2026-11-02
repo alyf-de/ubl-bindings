@@ -46,8 +46,8 @@ import ubl_bindings
 
 invoice = ubl_bindings.parse("invoice.xml")
 
-print(invoice.id.value)                                  # "TOSL108"
-print(invoice.legal_monetary_total.payable_amount.value) # Decimal("729")
+print(invoice.id.value)  # "TOSL108"
+print(invoice.legal_monetary_total.payable_amount.value)  # Decimal("729")
 ```
 
 `parse()` returns an instance of the class for the root element, for example `Invoice` or `Order`. By default it uses the latest release. Each release can read the documents of all older 2.x releases.
@@ -134,10 +134,14 @@ Export also removes the `xsi:schemaLocation` attribute. This attribute is only a
 We use [uv](https://docs.astral.sh/uv/). See [ADR 0002](docs/adr/0002-build-tool.md).
 
 ```sh
-uv sync         # make the environment
-uv run pytest   # run the tests
-uv build        # make the wheel and the source distribution
+uv sync                 # make the environment
+uv run pytest           # run the tests
+uv run ruff format      # format the code
+uv run ruff check       # find lint errors
+uv build                # make the wheel and the source distribution
 ```
+
+The ruff configuration is in `pyproject.toml`. See [ADR 0005](docs/adr/0005-code-style.md).
 
 ### Layout
 

@@ -522,6 +522,7 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "pytest" },
+    { name = "ruff" },
     { name = "xsdata", extra = ["cli"] },
 ]
 
@@ -534,6 +535,7 @@ requires-dist = [
 [package.metadata.requires-dev]
 dev = [
     { name = "pytest", specifier = ">=8.0" },
+    { name = "ruff", specifier = "==0.17.3" },
     { name = "xsdata", extras = ["cli"], specifier = "==26.10" },
 ]
 
