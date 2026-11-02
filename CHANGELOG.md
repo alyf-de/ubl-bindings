@@ -6,6 +6,7 @@ All notable changes to this project are in this file. The format is [Keep a Chan
 
 ### Added
 
+- The package has a `py.typed` marker. Type checkers such as mypy and pyright now use the type hints of the generated classes.
 - Best-effort parsing: `parse(xml, strict=False)` reads documents that are not valid. Missing mandatory elements become `None`. Unknown elements and attributes are skipped.
 
 ### Changed

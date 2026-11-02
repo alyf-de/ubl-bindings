@@ -10,6 +10,7 @@ import dataclasses
 import importlib
 from functools import cache
 from pathlib import Path
+from typing import Any
 
 from lxml import etree
 from xsdata.formats.dataclass.parsers import XmlParser
@@ -31,7 +32,7 @@ _PREFIXES = {
 }
 
 
-def parse(xml: bytes, release: str = LATEST, strict: bool = True):
+def parse(xml: bytes, release: str = LATEST, strict: bool = True) -> Any:
     """Parse a UBL document into an instance of the class for its root element.
 
     A release can read the documents of all older 2.x releases.
@@ -50,7 +51,7 @@ def validate(xml: bytes, release: str = LATEST) -> list[str]:
     return _Release(release).validate(xml)
 
 
-def to_xml(document) -> bytes:
+def to_xml(document: Any) -> bytes:
     """Export a document to UTF-8 encoded XML, with the usual UBL namespace prefixes."""
     document_namespace = type(document).Meta.namespace
     serializer = XmlSerializer(config=SerializerConfig(indent="  "))
@@ -75,7 +76,7 @@ class _Release:
         self.bindings = importlib.import_module(f"ubl_bindings.v{version.replace('.', '_')}")
         self.schema_dir = Path(__file__).parent / "schemas" / version / "xsd"
 
-    def parse(self, xml: bytes, strict: bool):
+    def parse(self, xml: bytes, strict: bool) -> Any:
         document_name = etree.QName(_parse_root(xml)).localname
         document_class = getattr(self.bindings, document_name)
         config = _STRICT if strict else _BEST_EFFORT
@@ -105,7 +106,7 @@ def _parse_root(xml: bytes) -> etree._Element:
     return root
 
 
-def _create_strict(cls: type, params: dict):
+def _create_strict(cls: type, params: dict) -> Any:
     """Create an instance. Raise ValueError if a mandatory field is missing."""
     missing = [_describe(field) for field in _missing_fields(cls, params)]
     if missing:
@@ -117,7 +118,7 @@ def _create_strict(cls: type, params: dict):
     return cls(**params)
 
 
-def _create_best_effort(cls: type, params: dict):
+def _create_best_effort(cls: type, params: dict) -> Any:
     """Create an instance. Set missing mandatory fields to None."""
     missing = {field.name: None for field in _missing_fields(cls, params)}
     return cls(**params, **missing)
