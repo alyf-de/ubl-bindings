@@ -18,3 +18,4 @@ This folder contains the architecture decision records (ADR) of this project. An
 | 0003 | [Project name: ubl-bindings](0003-project-name.md)             | Accepted |
 | 0004 | [No packages for UBL 1.0 and UBL 2.0](0004-ubl-1.0-and-2.0.md) | Accepted |
 | 0005 | [Code style: ruff](0005-code-style.md)                         | Accepted |
+| 0006 | [Versioning: SemVer](0006-versioning.md)                       | Accepted |

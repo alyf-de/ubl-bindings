@@ -58,6 +58,8 @@ To use a specific release:
 invoice = ubl_bindings.parse("invoice.xml", release="2.1")
 ```
 
+A new version of this library can add a new UBL release. Then the default release changes, and `parse()` returns classes from a different package. If your code depends on the classes of one release, give `release=`.
+
 ### Write a document
 
 ```python
@@ -142,6 +144,16 @@ uv build                # make the wheel and the source distribution
 ```
 
 The ruff configuration is in `pyproject.toml`. See [ADR 0005](docs/adr/0005-code-style.md).
+
+### Versioning
+
+We use [Semantic Versioning](https://semver.org/). A renamed generated class or field is a breaking change. A new UBL release is a minor change. See [ADR 0006](docs/adr/0006-versioning.md).
+
+To make a release:
+
+1. Run `uv version --bump major|minor|patch`.
+2. Move the entries under "Unreleased" in `CHANGELOG.md` to a section for the new version.
+3. Commit, then add the tag `vX.Y.Z`.
 
 ### Layout
 
