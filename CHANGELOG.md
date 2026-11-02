@@ -4,6 +4,18 @@ All notable changes to this project are in this file. The format is [Keep a Chan
 
 ## [Unreleased]
 
+### Added
+
+- Best-effort parsing: `parse(source, strict=False)` reads documents that are not valid. Missing mandatory elements become `None`. Unknown elements and attributes are skipped.
+
+### Changed
+
+- **Breaking:** `parse()` is strict by default. It raises `ValueError` for an unknown attribute or a value that cannot be converted. Before, it skipped unknown attributes and kept such values as strings.
+
+### Fixed
+
+- `parse()` raises `ValueError` with the name of the missing element if a mandatory element is missing. Before, it raised `TypeError`.
+
 ## [0.1.0] - 2026-11-02
 
 ### Added

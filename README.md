@@ -60,6 +60,22 @@ invoice = ubl_bindings.parse("invoice.xml", release="2.1")
 
 A new version of this library can add a new UBL release. Then the default release changes, and `parse()` returns classes from a different package. If your code depends on the classes of one release, give `release=`.
 
+### Read a document that is not valid
+
+By default, `parse()` is strict. It raises `ValueError` if the document does not fit the classes, for example if a mandatory element is missing or an element is unknown. Strict parsing is not a full validation. For example, it accepts elements in the wrong order. Use `validate()` to find all errors.
+
+To read as much as possible from a document that is not valid, for example a received invoice, use best-effort mode:
+
+```python
+invoice = ubl_bindings.parse("invoice.xml", strict=False)
+```
+
+In best-effort mode:
+
+- A missing mandatory element or attribute is `None`.
+- Unknown elements and attributes are skipped. Their data is lost.
+- A value that cannot be converted, for example the amount `abc`, stays a string. xsdata shows a `ConverterWarning`.
+
 ### Write a document
 
 ```python
