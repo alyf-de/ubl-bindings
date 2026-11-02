@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xsdata configuration. scripts/generate.py sets the package for each release. -->
+<Config xmlns="http://pypi.org/project/xsdata" version="26.10">
+  <Output maxLineLength="79" genericCollections="false" unionType="true">
+    <Package>ubl_bindings</Package>
+    <Format repr="true" eq="true" order="false" unsafeHash="false" frozen="false" slots="false" kwOnly="false">dataclasses</Format>
+    <Structure>namespaces</Structure>
+    <DocstringStyle>Blank</DocstringStyle>
+    <RelativeImports>false</RelativeImports>
+    <CompoundFields defaultName="choice" useSubstitutionGroups="true" forceDefaultName="false" maxNameParts="3">true</CompoundFields>
+    <WrapperFields>false</WrapperFields>
+    <PostponedAnnotations>false</PostponedAnnotations>
+    <UnnestClasses>true</UnnestClasses>
+    <IgnorePatterns>true</IgnorePatterns>
+    <!-- No header: it contains a timestamp and makes every run a diff. -->
+    <IncludeHeader>false</IncludeHeader>
+  </Output>
+  <Conventions>
+    <ClassName case="pascalCase" safePrefix="type"/>
+    <FieldName case="snakeCase" safePrefix="value"/>
+    <ConstantName case="screamingSnakeCase" safePrefix="value"/>
+    <ModuleName case="snakeCase" safePrefix="mod"/>
+    <PackageName case="snakeCase" safePrefix="pkg"/>
+  </Conventions>
+  <Substitutions>
+    <Substitution type="class" search="(.*)Class$" replace="\1Type"/>
+  </Substitutions>
+  <Extensions/>
+</Config>

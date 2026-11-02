@@ -1,0 +1,13715 @@
+from __future__ import annotations
+
+from dataclasses import dataclass
+
+from ubl_bindings.v2_5.oasis.names.specification.bdndr.schema.xsd.unqualified_data_types_1 import (
+    AmountType as UnqualifiedDataTypes1AmountType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.bdndr.schema.xsd.unqualified_data_types_1 import (
+    BinaryObjectType,
+    IdentifierType,
+    IndicatorType,
+    NumericType,
+    TimeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.bdndr.schema.xsd.unqualified_data_types_1 import (
+    CodeType as UnqualifiedDataTypes1CodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.bdndr.schema.xsd.unqualified_data_types_1 import (
+    DateType as UnqualifiedDataTypes1DateType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.bdndr.schema.xsd.unqualified_data_types_1 import (
+    MeasureType as UnqualifiedDataTypes1MeasureType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.bdndr.schema.xsd.unqualified_data_types_1 import (
+    NameType as UnqualifiedDataTypes1NameType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.bdndr.schema.xsd.unqualified_data_types_1 import (
+    PercentType as UnqualifiedDataTypes1PercentType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.bdndr.schema.xsd.unqualified_data_types_1 import (
+    QuantityType as UnqualifiedDataTypes1QuantityType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.bdndr.schema.xsd.unqualified_data_types_1 import (
+    RateType as UnqualifiedDataTypes1RateType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.bdndr.schema.xsd.unqualified_data_types_1 import (
+    TextType as UnqualifiedDataTypes1TextType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    AllowanceChargeReasonCodeType as QualifiedDataTypes2AllowanceChargeReasonCodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    ChannelCodeType as QualifiedDataTypes2ChannelCodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    ChipCodeType,
+    CountryIdentificationCodeType,
+    LanguageCodeType,
+    OperatorCodeType,
+    UnitOfMeasureCodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    CurrencyCodeType as QualifiedDataTypes2CurrencyCodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    DocumentStatusCodeType as QualifiedDataTypes2DocumentStatusCodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    LatitudeDirectionCodeType as QualifiedDataTypes2LatitudeDirectionCodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    LineStatusCodeType as QualifiedDataTypes2LineStatusCodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    LongitudeDirectionCodeType as QualifiedDataTypes2LongitudeDirectionCodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    PackagingTypeCodeType as QualifiedDataTypes2PackagingTypeCodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    PaymentMeansCodeType as QualifiedDataTypes2PaymentMeansCodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    ReceiptAdviceTypeCodeType as QualifiedDataTypes2ReceiptAdviceTypeCodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    SubstitutionStatusCodeType as QualifiedDataTypes2SubstitutionStatusCodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    TransportEquipmentTypeCodeType as QualifiedDataTypes2TransportEquipmentTypeCodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    TransportModeCodeType as QualifiedDataTypes2TransportModeCodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    WeekDayCodeType as QualifiedDataTypes2WeekDayCodeType,
+)
+from ubl_bindings.v2_5.oasis.names.specification.ubl.schema.xsd.qualified_data_types_2 import (
+    WeighingMethodCodeType as QualifiedDataTypes2WeighingMethodCodeType,
+)
+
+__NAMESPACE__ = (
+    "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+)
+
+
+@dataclass(kw_only=True)
+class AcceptanceIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AcceptedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AcceptedVariantsDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AccessToolsUritype(IdentifierType):
+    class Meta:
+        name = "AccessToolsURIType"
+
+
+@dataclass(kw_only=True)
+class AccountFormatCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AccountIdtype(IdentifierType):
+    class Meta:
+        name = "AccountIDType"
+
+
+@dataclass(kw_only=True)
+class AccountTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AccountingCostCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AccountingCostType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ActionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ActivityLevelMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ActivityTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ActivityTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ActualDeliveryDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ActualDeliveryTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ActualDespatchDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ActualDespatchTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ActualPickupDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ActualPickupTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ActualTemperatureReductionQuantityType(
+    UnqualifiedDataTypes1QuantityType
+):
+    pass
+
+
+@dataclass(kw_only=True)
+class AdValoremIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AdditionalAccountIdtype(IdentifierType):
+    class Meta:
+        name = "AdditionalAccountIDType"
+
+
+@dataclass(kw_only=True)
+class AdditionalConditionsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AdditionalInformationType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AdditionalMattersDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AdditionalStreetNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AddressFormatCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AddressTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AdjustmentReasonCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AdmissionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AdvertisementAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AgencyIdtype(IdentifierType):
+    class Meta:
+        name = "AgencyIDType"
+
+
+@dataclass(kw_only=True)
+class AgencyNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AgreementTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AirFlowPercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AircraftIdtype(IdentifierType):
+    class Meta:
+        name = "AircraftIDType"
+
+
+@dataclass(kw_only=True)
+class AliasNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AllocatedEnergyMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AllowanceChargeReasonCodeType(
+    QualifiedDataTypes2AllowanceChargeReasonCodeType
+):
+    pass
+
+
+@dataclass(kw_only=True)
+class AllowanceChargeReasonType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AllowanceTotalAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AllowanceTotalTaxInclusiveAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AltitudeMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AmountRateType(UnqualifiedDataTypes1RateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AnimalFoodApprovedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AnimalFoodIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AnnotationContentType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AnnualAverageAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AntennaLocusType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ApplicableCategoryCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ApplicableCategoryType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ApplicationDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ApplicationStatusCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ApprovalDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ApprovalStatusType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ArticleType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AtAnchorageIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AttributeIdtype(IdentifierType):
+    class Meta:
+        name = "AttributeIDType"
+
+
+@dataclass(kw_only=True)
+class AuctionConstraintIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AuctionUritype(IdentifierType):
+    class Meta:
+        name = "AuctionURIType"
+
+
+@dataclass(kw_only=True)
+class AuthorizationIdtype(IdentifierType):
+    class Meta:
+        name = "AuthorizationIDType"
+
+
+@dataclass(kw_only=True)
+class AvailabilityDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AvailabilityStatusCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AvailabilityTimePercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AverageAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AverageSubsequentContractAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AwardDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AwardIdtype(IdentifierType):
+    class Meta:
+        name = "AwardIDType"
+
+
+@dataclass(kw_only=True)
+class AwardTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AwardingCriterionDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AwardingCriterionIdtype(IdentifierType):
+    class Meta:
+        name = "AwardingCriterionIDType"
+
+
+@dataclass(kw_only=True)
+class AwardingCriterionTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class AwardingMethodTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BackOrderAllowedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BackorderQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BackorderReasonType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BalanceAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BalanceBroughtForwardIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BarcodeSymbologyIdtype(IdentifierType):
+    class Meta:
+        name = "BarcodeSymbologyIDType"
+
+
+@dataclass(kw_only=True)
+class BaseAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BaseQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BaseUnitMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BasedOnConsensusIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BasicConsumedQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BatchQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BestBeforeDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BindingOnBuyerIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BirthDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BirthplaceNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BlockNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BlockchainIdtype(IdentifierType):
+    class Meta:
+        name = "BlockchainIDType"
+
+
+@dataclass(kw_only=True)
+class BrandNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BriefDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BrokerAssignedIdtype(IdentifierType):
+    class Meta:
+        name = "BrokerAssignedIDType"
+
+
+@dataclass(kw_only=True)
+class BudgetYearNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BuildingNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BuildingNumberType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BulkCargoIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BuriedAtSeaIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BusinessClassificationEvidenceIdtype(IdentifierType):
+    class Meta:
+        name = "BusinessClassificationEvidenceIDType"
+
+
+@dataclass(kw_only=True)
+class BusinessIdentityEvidenceIdtype(IdentifierType):
+    class Meta:
+        name = "BusinessIdentityEvidenceIDType"
+
+
+@dataclass(kw_only=True)
+class BuyerEventIdtype(IdentifierType):
+    class Meta:
+        name = "BuyerEventIDType"
+
+
+@dataclass(kw_only=True)
+class BuyerProfileUritype(IdentifierType):
+    class Meta:
+        name = "BuyerProfileURIType"
+
+
+@dataclass(kw_only=True)
+class BuyerReferenceCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class BuyerReferenceType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class Cv2Idtype(IdentifierType):
+    class Meta:
+        name = "CV2IDType"
+
+
+@dataclass(kw_only=True)
+class CabotageIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CalculationExpressionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CalculationExpressionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CalculationMethodCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CalculationRateType(UnqualifiedDataTypes1RateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CalculationSequenceNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CallBaseAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CallDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CallExtensionAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CallTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CancellationNoteType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CandidateReductionConstraintIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CandidateStatementType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CanonicalizationMethodType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CapabilityTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CardChipCodeType(ChipCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CardTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CargoAndBallastTankConditionDescriptionType(
+    UnqualifiedDataTypes1TextType
+):
+    pass
+
+
+@dataclass(kw_only=True)
+class CargoTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CarrierAssignedIdtype(IdentifierType):
+    class Meta:
+        name = "CarrierAssignedIDType"
+
+
+@dataclass(kw_only=True)
+class CarrierServiceInstructionsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CashChangeAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CatalogueIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CategoryNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CertificateReferenceIdtype(IdentifierType):
+    class Meta:
+        name = "CertificateReferenceIDType"
+
+
+@dataclass(kw_only=True)
+class CertificateTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CertificateTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CertificateUritype(IdentifierType):
+    class Meta:
+        name = "CertificateURIType"
+
+
+@dataclass(kw_only=True)
+class CertificationLevelDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ChangeConditionsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ChannelCodeType(QualifiedDataTypes2ChannelCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ChannelType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CharacterSetCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CharacteristicsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ChargeBearerCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ChargeIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ChargeTotalAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ChargeTotalTaxInclusiveAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ChargeableQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ChargeableWeightMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ChildConsignmentQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ChipApplicationIdtype(IdentifierType):
+    class Meta:
+        name = "ChipApplicationIDType"
+
+
+@dataclass(kw_only=True)
+class CircularityTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CityNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CitySubdivisionNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CodeValueType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CollaborationPriorityCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CommentType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CommodityCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CompanyIdtype(IdentifierType):
+    class Meta:
+        name = "CompanyIDType"
+
+
+@dataclass(kw_only=True)
+class CompanyLegalFormCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CompanyLegalFormType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CompanyLiquidationStatusCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ComparedValueMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ComparisonDataCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ComparisonDataSourceCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ComparisonForecastIssueDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ComparisonForecastIssueTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CompletionIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CompletionPercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConditionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConditionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConditionsDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConditionsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConfidentialityLevelCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConsigneeAssignedIdtype(IdentifierType):
+    class Meta:
+        name = "ConsigneeAssignedIDType"
+
+
+@dataclass(kw_only=True)
+class ConsignmentQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConsignorAssignedIdtype(IdentifierType):
+    class Meta:
+        name = "ConsignorAssignedIDType"
+
+
+@dataclass(kw_only=True)
+class ConsolidatableIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConsolidatedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConstitutionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConsumerIncentiveTacticTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConsumerUnitQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConsumersEnergyLevelCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConsumersEnergyLevelType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConsumptionEnergyQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConsumptionIdtype(IdentifierType):
+    class Meta:
+        name = "ConsumptionIDType"
+
+
+@dataclass(kw_only=True)
+class ConsumptionLevelCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConsumptionLevelType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConsumptionMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConsumptionReportIdtype(IdentifierType):
+    class Meta:
+        name = "ConsumptionReportIDType"
+
+
+@dataclass(kw_only=True)
+class ConsumptionTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConsumptionTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ConsumptionWaterQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ContainerizedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ContentType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ContentUnitQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ContractFolderIdtype(IdentifierType):
+    class Meta:
+        name = "ContractFolderIDType"
+
+
+@dataclass(kw_only=True)
+class ContractNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ContractSubdivisionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ContractTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ContractTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ContractedCarrierAssignedIdtype(IdentifierType):
+    class Meta:
+        name = "ContractedCarrierAssignedIDType"
+
+
+@dataclass(kw_only=True)
+class ContractingSystemCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ContractingSystemTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CoordinateSystemCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CopyIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CopyQualityTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CorporateRegistrationTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CorporateStockAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CorrectionAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CorrectionTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CorrectionTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CorrectionUnitAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CountrySubentityCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CountrySubentityType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CourseOverGroundDirectionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CreditLineAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CreditNoteTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CreditedQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CrewQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CriterionDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CriterionTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CurrencyCodeType(QualifiedDataTypes2CurrencyCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CurrentChargeTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CurrentChargeTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CurrentOperatingSecurityLevelCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CustomerAssignedAccountIdtype(IdentifierType):
+    class Meta:
+        name = "CustomerAssignedAccountIDType"
+
+
+@dataclass(kw_only=True)
+class CustomerReferenceType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CustomizationIdtype(IdentifierType):
+    class Meta:
+        name = "CustomizationIDType"
+
+
+@dataclass(kw_only=True)
+class CustomsClearanceServiceInstructionsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CustomsImportClassifiedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CustomsProcedureCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CustomsStatusCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class CustomsTariffQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DamageRemarksType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DangerousGoodsApprovedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DataSendingCapabilityType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DataSourceCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DebitLineAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DebitNoteTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DebitedQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DeclarationTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DeclaredCarriageValueAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DeclaredCustomsValueAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DeclaredForCarriageValueAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DeclaredStatisticsValueAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DeductibleAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DefaultLanguageCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DeliveredQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DeliveryAcceptanceCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DeliveryInstructionsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DemurrageInstructionsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DepartmentType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DescriptionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DespatchAdviceTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DiedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DifferenceTemperatureReductionQuantityType(
+    UnqualifiedDataTypes1QuantityType
+):
+    pass
+
+
+@dataclass(kw_only=True)
+class DirectionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DisplayTacticTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DispositionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DistributionTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DistributionTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DistrictType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DocumentCurrencyCodeType(QualifiedDataTypes2CurrencyCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DocumentDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DocumentHashType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DocumentIdtype(IdentifierType):
+    class Meta:
+        name = "DocumentIDType"
+
+
+@dataclass(kw_only=True)
+class DocumentStatusCodeType(QualifiedDataTypes2DocumentStatusCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DocumentStatusReasonCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DocumentStatusReasonDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DocumentTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DocumentTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DocumentationFeeAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DueDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DurationMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DutyCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class DutyType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EarliestPickupDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EarliestPickupTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EconomicOperatorGroupNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EconomicOperatorRegistryUritype(IdentifierType):
+    class Meta:
+        name = "EconomicOperatorRegistryURIType"
+
+
+@dataclass(kw_only=True)
+class EffectDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EffectiveDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EffectiveTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ElectronicAddressIdtype(IdentifierType):
+    class Meta:
+        name = "ElectronicAddressIDType"
+
+
+@dataclass(kw_only=True)
+class ElectronicCatalogueUsageIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ElectronicDeviceDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ElectronicInvoiceAcceptedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ElectronicMailType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ElectronicOrderUsageIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ElectronicPaymentUsageIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EmbeddedDocumentBinaryObjectType(BinaryObjectType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EmbeddedDocumentType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EmergencyProceduresCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EmissionFactorSourceType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EmissionStandardReferenceType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EmployeeQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EncodingCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EndDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EndTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EndpointIdtype(IdentifierType):
+    class Meta:
+        name = "EndpointIDType"
+
+
+@dataclass(kw_only=True)
+class EndpointUritype(IdentifierType):
+    class Meta:
+        name = "EndpointURIType"
+
+
+@dataclass(kw_only=True)
+class EnergySourceTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EntitySizeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EnvelopeTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EnvironmentalEmissionTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EstimatedAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EstimatedConsumedQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EstimatedDeliveryDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EstimatedDeliveryTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EstimatedDespatchDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EstimatedDespatchTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EstimatedGeneratedUntilNextPortMeasureType(
+    UnqualifiedDataTypes1MeasureType
+):
+    pass
+
+
+@dataclass(kw_only=True)
+class EstimatedMaximumValueAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EstimatedOverallContractAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EstimatedOverallContractQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EstimatedOverallFrameworkContractsAmountType(
+    UnqualifiedDataTypes1AmountType
+):
+    pass
+
+
+@dataclass(kw_only=True)
+class EstimatedTimingFurtherPublicationType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EvacuatedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EvaluationCriterionTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EvaluationMethodTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class EvidenceTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExceptionResolutionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExceptionStatusCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExcessAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExchangeMarketIdtype(IdentifierType):
+    class Meta:
+        name = "ExchangeMarketIDType"
+
+
+@dataclass(kw_only=True)
+class ExchangeMethodCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExchangeNetworkIdtype(IdentifierType):
+    class Meta:
+        name = "ExchangeNetworkIDType"
+
+
+@dataclass(kw_only=True)
+class ExchangedPercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExclusionReasonType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExecutionRequirementCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExemptionReasonCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExemptionReasonType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExpectedAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExpectedAnchorageIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExpectedCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExpectedDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExpectedIdtype(IdentifierType):
+    class Meta:
+        name = "ExpectedIDType"
+
+
+@dataclass(kw_only=True)
+class ExpectedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExpectedOperatorQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExpectedQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExpectedUritype(IdentifierType):
+    class Meta:
+        name = "ExpectedURIType"
+
+
+@dataclass(kw_only=True)
+class ExpectedValueNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExpenseCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExpiryDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExpiryTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExportReasonCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExportReasonType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExportTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExpressionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExpressionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ExtendedIdtype(IdentifierType):
+    class Meta:
+        name = "ExtendedIDType"
+
+
+@dataclass(kw_only=True)
+class ExtensionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FaceValueAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FamilyNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FeatureTacticTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FeeAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FeeDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FeeTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FileNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FinalReexportationDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FinancingInstrumentCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FirstNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FirstShipmentAvailabilityDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FirstShipmentAvailibilityDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FissileCriticalitySafetyIndexNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FloorType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FollowupContractIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ForecastPurposeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ForecastTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FormatCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FormatIdtype(IdentifierType):
+    class Meta:
+        name = "FormatIDType"
+
+
+@dataclass(kw_only=True)
+class ForwarderServiceInstructionsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FreeOfChargeIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FreeOnBoardValueAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FreightForwarderAssignedIdtype(IdentifierType):
+    class Meta:
+        name = "FreightForwarderAssignedIDType"
+
+
+@dataclass(kw_only=True)
+class FreightRateClassCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FrequencyType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FridayAvailabilityIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FrozenDocumentIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FrozenPeriodDaysNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FuelConsumptionMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FuelTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FuelTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FulfilmentIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FulfilmentIndicatorTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FullnessIndicationCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FullyPaidSharesIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FumigatedCargoTransportIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FunctionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FundingProgramCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class FundingProgramType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class GasPressureQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class GateIdtype(IdentifierType):
+    class Meta:
+        name = "GateIDType"
+
+
+@dataclass(kw_only=True)
+class GenderCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class GeneralCargoIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class GivenTreatmentDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class GoodsItemPassportCounterfoilIdtype(IdentifierType):
+    class Meta:
+        name = "GoodsItemPassportCounterfoilIDType"
+
+
+@dataclass(kw_only=True)
+class GoodsItemPassportIdtype(IdentifierType):
+    class Meta:
+        name = "GoodsItemPassportIDType"
+
+
+@dataclass(kw_only=True)
+class GovernmentAgreementConstraintIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class GrossMassMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class GrossTonnageMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class GrossVolumeMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class GrossWeightMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class GroupTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class GroupTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class GroupingLotsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class GuaranteeTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class GuaranteedDespatchDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class GuaranteedDespatchTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class HandlingCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class HandlingInstructionsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class HashAlgorithmMethodType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class HaulageInstructionsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class HazardClassIdtype(IdentifierType):
+    class Meta:
+        name = "HazardClassIDType"
+
+
+@dataclass(kw_only=True)
+class HazardousCategoryCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class HazardousRegulationCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class HazardousRiskIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class HazardousTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class HeatingTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class HeatingTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class HigherTenderAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class HolderNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class HumanFoodApprovedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class HumanFoodIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class HumidityPercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class Idtype(IdentifierType):
+    class Meta:
+        name = "IDType"
+
+
+@dataclass(kw_only=True)
+class ImoguidelinesOnBoardIndicatorType(IndicatorType):
+    class Meta:
+        name = "IMOGuidelinesOnBoardIndicatorType"
+
+
+@dataclass(kw_only=True)
+class InfshipClassCodeType(UnqualifiedDataTypes1CodeType):
+    class Meta:
+        name = "INFShipClassCodeType"
+
+
+@dataclass(kw_only=True)
+class IsscabsenceReasonType(UnqualifiedDataTypes1TextType):
+    class Meta:
+        name = "ISSCAbsenceReasonType"
+
+
+@dataclass(kw_only=True)
+class IsscexpiryDateType(UnqualifiedDataTypes1DateType):
+    class Meta:
+        name = "ISSCExpiryDateType"
+
+
+@dataclass(kw_only=True)
+class IdentificationCodeType(CountryIdentificationCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class IdentificationIdtype(IdentifierType):
+    class Meta:
+        name = "IdentificationIDType"
+
+
+@dataclass(kw_only=True)
+class ImmobilizationCertificateIdtype(IdentifierType):
+    class Meta:
+        name = "ImmobilizationCertificateIDType"
+
+
+@dataclass(kw_only=True)
+class ImpactCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ImportanceCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class IndicationIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class IndustryClassificationCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InfectiousDiseaseCaseOnBoardIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InformationType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InformationUritype(IdentifierType):
+    class Meta:
+        name = "InformationURIType"
+
+
+@dataclass(kw_only=True)
+class InhalationToxicityZoneCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InhouseMailType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InitiatingPartyIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InspectionMethodCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InstallmentDueDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InstructionIdtype(IdentifierType):
+    class Meta:
+        name = "InstructionIDType"
+
+
+@dataclass(kw_only=True)
+class InstructionNoteType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InstructionsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InsurancePremiumAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InsuranceTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InsuranceTypeDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InsuranceValueAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InsuredValueAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InterestRatePercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InventoryValueAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InvoiceTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InvoicedQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class InvoicingPartyReferenceType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class IssueDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class IssueNumberIdtype(IdentifierType):
+    class Meta:
+        name = "IssueNumberIDType"
+
+
+@dataclass(kw_only=True)
+class IssueTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class IssuerIdtype(IdentifierType):
+    class Meta:
+        name = "IssuerIDType"
+
+
+@dataclass(kw_only=True)
+class IssuerScopeIdtype(IdentifierType):
+    class Meta:
+        name = "IssuerScopeIDType"
+
+
+@dataclass(kw_only=True)
+class ItemClassificationCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ItemTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ItemUpdateRequestIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class JobTitleType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class JoinedShipDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class JourneyIdtype(IdentifierType):
+    class Meta:
+        name = "JourneyIDType"
+
+
+@dataclass(kw_only=True)
+class JurisdictionLevelType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class JustificationDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class JustificationType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class KeywordType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LanguageIdtype(IdentifierType):
+    class Meta:
+        name = "LanguageIDType"
+
+
+@dataclass(kw_only=True)
+class LastDrinkingWaterAnalysisDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LastRevisionDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LastRevisionTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LatestDeliveryDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LatestDeliveryTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LatestMeterQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LatestMeterReadingDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LatestMeterReadingMethodCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LatestMeterReadingMethodType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LatestPickupDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LatestPickupTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LatestProposalAcceptanceDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LatestReplyDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LatestReplyTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LatestSecurityClearanceDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LatitudeDegreesMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LatitudeDirectionCodeType(QualifiedDataTypes2LatitudeDirectionCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LatitudeMinutesMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LeadTimeMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LegalReferenceType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LegalStatusIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LiabilityAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LicensePlateIdtype(IdentifierType):
+    class Meta:
+        name = "LicensePlateIDType"
+
+
+@dataclass(kw_only=True)
+class LifeCycleStatusCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LifecycleStageCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LifecycleStageDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LimitationDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LineCountNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LineExtensionAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LineIdtype(IdentifierType):
+    class Meta:
+        name = "LineIDType"
+
+
+@dataclass(kw_only=True)
+class LineNumberNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LineStatusCodeType(QualifiedDataTypes2LineStatusCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LineType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ListValueType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LivestockIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LoadingLengthMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LoadingSequenceIdtype(IdentifierType):
+    class Meta:
+        name = "LoadingSequenceIDType"
+
+
+@dataclass(kw_only=True)
+class LocaleCodeType(LanguageCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LocationIdtype(IdentifierType):
+    class Meta:
+        name = "LocationIDType"
+
+
+@dataclass(kw_only=True)
+class LocationType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LocationTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LoginType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LogoReferenceIdtype(IdentifierType):
+    class Meta:
+        name = "LogoReferenceIDType"
+
+
+@dataclass(kw_only=True)
+class LongitudeDegreesMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LongitudeDirectionCodeType(
+    QualifiedDataTypes2LongitudeDirectionCodeType
+):
+    pass
+
+
+@dataclass(kw_only=True)
+class LongitudeMinutesMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LossRiskResponsibilityCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LossRiskType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LotNumberIdtype(IdentifierType):
+    class Meta:
+        name = "LotNumberIDType"
+
+
+@dataclass(kw_only=True)
+class LotsGroupIdtype(IdentifierType):
+    class Meta:
+        name = "LotsGroupIDType"
+
+
+@dataclass(kw_only=True)
+class LowTendersDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class LowerOrangeHazardPlacardIdtype(IdentifierType):
+    class Meta:
+        name = "LowerOrangeHazardPlacardIDType"
+
+
+@dataclass(kw_only=True)
+class LowerTenderAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MmsiregistrationIdtype(IdentifierType):
+    class Meta:
+        name = "MMSIRegistrationIDType"
+
+
+@dataclass(kw_only=True)
+class MaintenanceFrequencyCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaintenanceFrequencyDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ManagementPlanImplementedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ManagementPlanOnBoardIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MandateTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ManifestTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ManifestTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ManufactureDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ManufactureTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaritimePollutantCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MarkAttentionIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MarkAttentionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MarkCareIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MarkCareType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MarketCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MarketNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MarketValueAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MarkingIdtype(IdentifierType):
+    class Meta:
+        name = "MarkingIDType"
+
+
+@dataclass(kw_only=True)
+class MathematicOperatorCodeType(OperatorCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaxDedicatedStorageCapacityMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumAdvertisementAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumBackorderQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumCopiesNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumDataLossDurationMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumIncidentNotificationDurationMeasureType(
+    UnqualifiedDataTypes1MeasureType
+):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumLotsAwardedNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumLotsSubmittedNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumNumberNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumOperatorQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumOrderQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumOriginalsNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumPaidAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumPaymentInstructionsNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumPercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumValueAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumValueNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumValueType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MaximumVariantQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MeanTimeToRecoverDurationMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MeasureCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MedicalFirstAidGuideCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MedicalPractitionerConsultedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MerchantIdtype(IdentifierType):
+    class Meta:
+        name = "MerchantIDType"
+
+
+@dataclass(kw_only=True)
+class MessageFormatType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MeterConstantCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MeterConstantType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MeterNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MeterNumberType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MeterReadingCommentsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MeterReadingTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MeterReadingTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MiddleNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MimeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MinimumAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MinimumBackorderQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MinimumDownTimeScheduleDurationMeasureType(
+    UnqualifiedDataTypes1MeasureType
+):
+    pass
+
+
+@dataclass(kw_only=True)
+class MinimumImprovementBidType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MinimumInventoryQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MinimumMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MinimumNumberNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MinimumOrderQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MinimumPercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MinimumQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MinimumResponseTimeDurationMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MinimumValueNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MinimumValueType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MiscellaneousEventTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ModelNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ModificationReasonCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ModificationReasonDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MondayAvailabilityIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MonetaryScopeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MoreIllThanExpectedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MovieTitleType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MultipleOrderQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MultipleTendersCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class MultiplierFactorNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NameCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NameSuffixType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NationalIdtype(IdentifierType):
+    class Meta:
+        name = "NationalIDType"
+
+
+@dataclass(kw_only=True)
+class NationalityCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NationalityIdtype(IdentifierType):
+    class Meta:
+        name = "NationalityIDType"
+
+
+@dataclass(kw_only=True)
+class NatureCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NatureOfIllnessDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NatureOfTransactionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NavigationStatusCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NegotiationDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NetNetWeightMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NetTonnageMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NetVolumeMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NetWeightMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NetworkIdtype(IdentifierType):
+    class Meta:
+        name = "NetworkIDType"
+
+
+@dataclass(kw_only=True)
+class NoControlActionsReasonType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NoFurtherNegotiationIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NominationDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NominationTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NormalTemperatureReductionQuantityType(
+    UnqualifiedDataTypes1QuantityType
+):
+    pass
+
+
+@dataclass(kw_only=True)
+class NoteType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NoticeLanguageCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NoticeTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class NotificationTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class Oidtype(IdentifierType):
+    class Meta:
+        name = "OIDType"
+
+
+@dataclass(kw_only=True)
+class OccurrenceDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OccurrenceTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OfficialUseType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OnCarriageIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OneTimeChargeTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OneTimeChargeTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OnsetDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OntologyUritype(IdentifierType):
+    class Meta:
+        name = "OntologyURIType"
+
+
+@dataclass(kw_only=True)
+class OpenTenderIdtype(IdentifierType):
+    class Meta:
+        name = "OpenTenderIDType"
+
+
+@dataclass(kw_only=True)
+class OperatingYearsQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OptionalLineItemIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OptionsDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OrderIntervalDaysNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OrderQuantityIncrementNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OrderResponseCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OrderTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OrderableIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OrderableUnitFactorRateType(UnqualifiedDataTypes1RateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OrderableUnitType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OrganizationDepartmentType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OriginalContractingSystemIdtype(IdentifierType):
+    class Meta:
+        name = "OriginalContractingSystemIDType"
+
+
+@dataclass(kw_only=True)
+class OriginalJobIdtype(IdentifierType):
+    class Meta:
+        name = "OriginalJobIDType"
+
+
+@dataclass(kw_only=True)
+class OtherConditionsIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OtherControlActionsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OtherInstructionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OtherNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OutstandingQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OutstandingReasonType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OversupplyQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class OwnerTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PackLevelCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PackQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PackSizeNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PackageLevelCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PackagingDangerLevelCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PackagingTypeCodeType(QualifiedDataTypes2PackagingTypeCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PackagingTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PackingCriteriaCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PackingMaterialType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaidAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaidCashAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaidDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaidTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ParentDocumentIdtype(IdentifierType):
+    class Meta:
+        name = "ParentDocumentIDType"
+
+
+@dataclass(kw_only=True)
+class ParentDocumentLineReferenceIdtype(IdentifierType):
+    class Meta:
+        name = "ParentDocumentLineReferenceIDType"
+
+
+@dataclass(kw_only=True)
+class ParentDocumentTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ParentDocumentVersionIdtype(IdentifierType):
+    class Meta:
+        name = "ParentDocumentVersionIDType"
+
+
+@dataclass(kw_only=True)
+class PartPresentationCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PartecipationPercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PartialDeliveryIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ParticipantIdtype(IdentifierType):
+    class Meta:
+        name = "ParticipantIDType"
+
+
+@dataclass(kw_only=True)
+class ParticipationPercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PartyCapacityAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PartyTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PartyTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PassengerQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PasswordType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PayPerViewType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PayableAlternativeAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PayableAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PayableRoundingAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PayerReferenceType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaymentAlternativeCurrencyCodeType(QualifiedDataTypes2CurrencyCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaymentChannelCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaymentCurrencyCodeType(QualifiedDataTypes2CurrencyCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaymentDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaymentDueDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaymentFrequencyCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaymentIdtype(IdentifierType):
+    class Meta:
+        name = "PaymentIDType"
+
+
+@dataclass(kw_only=True)
+class PaymentMeansCodeType(QualifiedDataTypes2PaymentMeansCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaymentMeansDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaymentMeansIdtype(IdentifierType):
+    class Meta:
+        name = "PaymentMeansIDType"
+
+
+@dataclass(kw_only=True)
+class PaymentNoteType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaymentOrderReferenceType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaymentPercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaymentPlatformIdtype(IdentifierType):
+    class Meta:
+        name = "PaymentPlatformIDType"
+
+
+@dataclass(kw_only=True)
+class PaymentPurposeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PaymentRailIdtype(IdentifierType):
+    class Meta:
+        name = "PaymentRailIDType"
+
+
+@dataclass(kw_only=True)
+class PaymentTerminalIdtype(IdentifierType):
+    class Meta:
+        name = "PaymentTerminalIDType"
+
+
+@dataclass(kw_only=True)
+class PaymentTermsDetailsUritype(IdentifierType):
+    class Meta:
+        name = "PaymentTermsDetailsURIType"
+
+
+@dataclass(kw_only=True)
+class PenaltyAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PenaltySurchargePercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PerUnitAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PerformanceMetricTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PerformanceValueQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PerformingCarrierAssignedIdtype(IdentifierType):
+    class Meta:
+        name = "PerformingCarrierAssignedIDType"
+
+
+@dataclass(kw_only=True)
+class PersonalSituationType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PhoneNumberType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PlacardEndorsementType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PlacardNotationType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PlannedDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PlannedInspectionsDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PlannedOperationsDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PlannedWorksDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PlotIdentificationType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PositionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PositionInPortIdtype(IdentifierType):
+    class Meta:
+        name = "PositionInPortIDType"
+
+
+@dataclass(kw_only=True)
+class PostEventNotificationDurationMeasureType(
+    UnqualifiedDataTypes1MeasureType
+):
+    pass
+
+
+@dataclass(kw_only=True)
+class PostalZoneType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PostboxType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PowerIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PreCarriageIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PreEventNotificationDurationMeasureType(
+    UnqualifiedDataTypes1MeasureType
+):
+    pass
+
+
+@dataclass(kw_only=True)
+class PreferenceCriterionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PreferredLanguageLocaleCodeType(LanguageCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PrepaidAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PrepaidIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PrepaidPaymentReferenceIdtype(IdentifierType):
+    class Meta:
+        name = "PrepaidPaymentReferenceIDType"
+
+
+@dataclass(kw_only=True)
+class PreviousCancellationReasonCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PreviousJobIdtype(IdentifierType):
+    class Meta:
+        name = "PreviousJobIDType"
+
+
+@dataclass(kw_only=True)
+class PreviousMeterQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PreviousMeterReadingDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PreviousMeterReadingMethodCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PreviousMeterReadingMethodType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PreviousVersionIdtype(IdentifierType):
+    class Meta:
+        name = "PreviousVersionIDType"
+
+
+@dataclass(kw_only=True)
+class PriceAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PriceChangeReasonType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PriceEvaluationCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PriceRevisionFormulaDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PriceTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PriceTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PricingCurrencyCodeType(QualifiedDataTypes2CurrencyCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PricingUpdateRequestIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PrimaryAccountNumberIdtype(IdentifierType):
+    class Meta:
+        name = "PrimaryAccountNumberIDType"
+
+
+@dataclass(kw_only=True)
+class PrintQualifierType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PriorityType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PrivacyCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PrivatePartyIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PrizeDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PrizeIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ProcedureCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ProcessDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ProcessReasonCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ProcessReasonType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ProcessingTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ProcurementSubTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ProcurementTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ProcurementTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ProductTraceIdtype(IdentifierType):
+    class Meta:
+        name = "ProductTraceIDType"
+
+
+@dataclass(kw_only=True)
+class ProfileExecutionIdtype(IdentifierType):
+    class Meta:
+        name = "ProfileExecutionIDType"
+
+
+@dataclass(kw_only=True)
+class ProfileIdtype(IdentifierType):
+    class Meta:
+        name = "ProfileIDType"
+
+
+@dataclass(kw_only=True)
+class ProfileStatusCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ProgressPercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PromotionalEventTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ProperShippingNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PropertyGroupTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ProtocolIdtype(IdentifierType):
+    class Meta:
+        name = "ProtocolIDType"
+
+
+@dataclass(kw_only=True)
+class ProviderTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PublicPartyIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PublishAwardIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PurchaseDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PurchaseTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PurposeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PurposeTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PurposeTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class PurposeType1(UnqualifiedDataTypes1TextType):
+    class Meta:
+        name = "PurposeType"
+
+
+@dataclass(kw_only=True)
+class QualificationApplicationTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class QualityControlCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class QuantityDiscrepancyCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class QuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RadioCallSignIdtype(IdentifierType):
+    class Meta:
+        name = "RadioCallSignIDType"
+
+
+@dataclass(kw_only=True)
+class RailCarIdtype(IdentifierType):
+    class Meta:
+        name = "RailCarIDType"
+
+
+@dataclass(kw_only=True)
+class RankCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RankType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RateOfTurnMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RateType(UnqualifiedDataTypes1RateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReasonCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReceiptAdviceTypeCodeType(QualifiedDataTypes2ReceiptAdviceTypeCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReceivedDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReceivedElectronicTenderQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReceivedForeignTenderQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReceivedQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReceivedTenderQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReceivedTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RecurringProcurementDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RecurringProcurementIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RecyclabilityPercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RecycledContentPercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReferenceDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReferenceEventCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReferenceIdtype(IdentifierType):
+    class Meta:
+        name = "ReferenceIDType"
+
+
+@dataclass(kw_only=True)
+class ReferenceTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReferenceType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReferencedConsignmentIdtype(IdentifierType):
+    class Meta:
+        name = "ReferencedConsignmentIDType"
+
+
+@dataclass(kw_only=True)
+class ReferencedDocumentInternalAddressType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RefrigeratedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RefrigerationOnIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RegionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RegisteredDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RegisteredTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RegistrationDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RegistrationExpirationDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RegistrationIdtype(IdentifierType):
+    class Meta:
+        name = "RegistrationIDType"
+
+
+@dataclass(kw_only=True)
+class RegistrationNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RegistrationNationalityIdtype(IdentifierType):
+    class Meta:
+        name = "RegistrationNationalityIDType"
+
+
+@dataclass(kw_only=True)
+class RegistrationNationalityType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RegulatoryDomainType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReinspectionRequiredIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RejectActionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RejectReasonCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RejectReasonType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RejectedQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RejectionNoteType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReleaseIdtype(IdentifierType):
+    class Meta:
+        name = "ReleaseIDType"
+
+
+@dataclass(kw_only=True)
+class ReliabilityPercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RemarksType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReminderSequenceNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReminderTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RenewalsIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReplenishmentOwnerDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReportTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReportTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReportedToMedicalOfficerIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RepresentationTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RepresentationTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RequestDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RequestForQuotationLineIdtype(IdentifierType):
+    class Meta:
+        name = "RequestForQuotationLineIDType"
+
+
+@dataclass(kw_only=True)
+class RequestTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RequestedDeliveryDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RequestedDespatchDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RequestedDespatchTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RequestedInvoiceCurrencyCodeType(QualifiedDataTypes2CurrencyCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RequestedPublicationDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RequiredCurriculaCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RequiredCurriculaIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RequiredCustomsIdtype(IdentifierType):
+    class Meta:
+        name = "RequiredCustomsIDType"
+
+
+@dataclass(kw_only=True)
+class RequiredDeliveryDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RequiredDeliveryTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RequiredFeeAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RequiredResponseMessageLevelCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResidenceTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResidenceTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResidentOccupantsNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResolutionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResolutionDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResolutionTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResolutionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResourceOriginDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResourceTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResponseAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResponseBinaryObjectType(BinaryObjectType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResponseCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResponseDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResponseIdtype(IdentifierType):
+    class Meta:
+        name = "ResponseIDType"
+
+
+@dataclass(kw_only=True)
+class ResponseIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResponseMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResponseNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResponseQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResponseTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResponseType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ResponseUritype(IdentifierType):
+    class Meta:
+        name = "ResponseURIType"
+
+
+@dataclass(kw_only=True)
+class RetailEventNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RetailEventStatusCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RetainedOnBoardMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReturnabilityIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReturnableMaterialIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ReturnableQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RevisedForecastLineIdtype(IdentifierType):
+    class Meta:
+        name = "RevisedForecastLineIDType"
+
+
+@dataclass(kw_only=True)
+class RevisionDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RevisionStatusCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RevisionTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RoamingPartnerNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RoleCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RoleDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RoomType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class RoundingAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SmesuitableIndicatorType(IndicatorType):
+    class Meta:
+        name = "SMESuitableIndicatorType"
+
+
+@dataclass(kw_only=True)
+class SsponBoardIndicatorType(IndicatorType):
+    class Meta:
+        name = "SSPOnBoardIndicatorType"
+
+
+@dataclass(kw_only=True)
+class SspsecurityMeasuresAppliedIndicatorType(IndicatorType):
+    class Meta:
+        name = "SSPSecurityMeasuresAppliedIndicatorType"
+
+
+@dataclass(kw_only=True)
+class SalesOrderIdtype(IdentifierType):
+    class Meta:
+        name = "SalesOrderIDType"
+
+
+@dataclass(kw_only=True)
+class SalesOrderLineIdtype(IdentifierType):
+    class Meta:
+        name = "SalesOrderLineIDType"
+
+
+@dataclass(kw_only=True)
+class SalinityMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SanitaryMeasureTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SanitaryMeasuresAppliedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SaturdayAvailabilityIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SchemaUritype(IdentifierType):
+    class Meta:
+        name = "SchemaURIType"
+
+
+@dataclass(kw_only=True)
+class SchemeUritype(IdentifierType):
+    class Meta:
+        name = "SchemeURIType"
+
+
+@dataclass(kw_only=True)
+class ScoreNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ScoringSystemCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SeaHeightMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SealIssuerTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SealStatusCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SealingPartyTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SecurityClassificationCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SecurityIdtype(IdentifierType):
+    class Meta:
+        name = "SecurityIDType"
+
+
+@dataclass(kw_only=True)
+class SecurityLevelCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SegregatedBallastMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SellerEventIdtype(IdentifierType):
+    class Meta:
+        name = "SellerEventIDType"
+
+
+@dataclass(kw_only=True)
+class SequenceIdtype(IdentifierType):
+    class Meta:
+        name = "SequenceIDType"
+
+
+@dataclass(kw_only=True)
+class SequenceNumberIdtype(IdentifierType):
+    class Meta:
+        name = "SequenceNumberIDType"
+
+
+@dataclass(kw_only=True)
+class SequenceNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SerialIdtype(IdentifierType):
+    class Meta:
+        name = "SerialIDType"
+
+
+@dataclass(kw_only=True)
+class SerialNumberIdtype(IdentifierType):
+    class Meta:
+        name = "SerialNumberIDType"
+
+
+@dataclass(kw_only=True)
+class ServiceInformationPreferenceCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ServiceLevelCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ServiceNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ServiceNumberCalledType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ServiceProviderPartyIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ServiceTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ServiceTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SettlementDiscountAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SettlementDiscountPercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SharesNumberQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ShipConfigurationCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ShipmentStageTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ShipmentStageTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ShippingMarksType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ShippingOrderIdtype(IdentifierType):
+    class Meta:
+        name = "ShippingOrderIDType"
+
+
+@dataclass(kw_only=True)
+class ShippingPriorityLevelCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ShipsRequirementsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ShortQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ShortageActionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SickAnimalDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SickAnimalOnBoardIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SignatureIdtype(IdentifierType):
+    class Meta:
+        name = "SignatureIDType"
+
+
+@dataclass(kw_only=True)
+class SignatureMethodType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SizeTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SocialMediaTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SoleProprietorshipIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SourceCurrencyBaseRateType(UnqualifiedDataTypes1RateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SourceCurrencyCodeType(QualifiedDataTypes2CurrencyCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SourceForecastIssueDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SourceForecastIssueTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SourceValueMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SpecialFormDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SpecialInstructionsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SpecialSecurityIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SpecialServiceInstructionsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SpecialTermsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SpecialTransportRequirementsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SpecificationIdtype(IdentifierType):
+    class Meta:
+        name = "SpecificationIDType"
+
+
+@dataclass(kw_only=True)
+class SpecificationTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SpeedOverGroundMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SplitConsignmentIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class StartDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class StartTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class StatementTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class StatusAvailableIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class StatusCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class StatusReasonCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class StatusReasonType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class StatusType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class StillIllIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class StillOnBoardIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class StowagePositionIdtype(IdentifierType):
+    class Meta:
+        name = "StowagePositionIDType"
+
+
+@dataclass(kw_only=True)
+class StowawayDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class StowawaysFoundOnBoardIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class StreetNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SubTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SubTypeDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SubcontractingConditionsCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SubjectCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SubjectType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SubmissionDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SubmissionDueDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SubmissionMethodCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SubscriberIdtype(IdentifierType):
+    class Meta:
+        name = "SubscriberIDType"
+
+
+@dataclass(kw_only=True)
+class SubscriberTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SubscriberTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SubstitutionStatusCodeType(
+    QualifiedDataTypes2SubstitutionStatusCodeType
+):
+    pass
+
+
+@dataclass(kw_only=True)
+class SuccessiveSequenceIdtype(IdentifierType):
+    class Meta:
+        name = "SuccessiveSequenceIDType"
+
+
+@dataclass(kw_only=True)
+class SummaryDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SundayAvailabilityIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SupplierAssignedAccountIdtype(IdentifierType):
+    class Meta:
+        name = "SupplierAssignedAccountIDType"
+
+
+@dataclass(kw_only=True)
+class SupplyChainActivityTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class SupplyTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TankIdtype(IdentifierType):
+    class Meta:
+        name = "TankIDType"
+
+
+@dataclass(kw_only=True)
+class TankTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TanksExchangedQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TanksInBallastQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TanksNotExchangedQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TareWeightMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TargetCurrencyBaseRateType(UnqualifiedDataTypes1RateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TargetCurrencyCodeType(QualifiedDataTypes2CurrencyCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TargetInventoryQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TargetServicePercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TariffClassCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TariffCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TariffDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxCurrencyCodeType(QualifiedDataTypes2CurrencyCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxEnergyAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxEnergyBalanceAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxEnergyOnAccountAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxEvidenceIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxExclusiveAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxExemptionReasonCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxExemptionReasonType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxIncludedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxInclusiveAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxInclusiveLineExtensionAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxInclusivePriceAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxLevelCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxPointDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TaxableAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TechnicalCommitteeDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TechnicalNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TelecommunicationsServiceCallCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TelecommunicationsServiceCallType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TelecommunicationsServiceCategoryCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TelecommunicationsServiceCategoryType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TelecommunicationsSupplyTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TelecommunicationsSupplyTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TelefaxType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TelephoneType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TenderEnvelopeIdtype(IdentifierType):
+    class Meta:
+        name = "TenderEnvelopeIDType"
+
+
+@dataclass(kw_only=True)
+class TenderEnvelopeTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TenderLanguageLocaleCodeType(LanguageCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TenderResultCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TenderTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TendererRequirementTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TendererRoleCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TerminatedIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TestIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TestMethodType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TextType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ThirdPartyPayerIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ThresholdAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ThresholdQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ThresholdValueComparisonCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ThursdayAvailabilityIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TierRangeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TierRatePercentType(UnqualifiedDataTypes1PercentType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TimeAmountType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TimeBasisCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TimeDeltaDaysQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TimeFrequencyCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TimezoneOffsetType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TimingComplaintCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TimingComplaintType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TitleType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ToBeDeliveredMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ToOrderIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalBalanceAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalBallastTanksOnBoardQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalBallastWaterCapacityMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalBallastWaterOnBoardMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalConsumedQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalCreditAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalDeadPersonQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalDebitAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalDeliveredQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalGoodsItemQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalIllPersonQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalInvoiceAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalMeteredQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalPackageQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalPackagesQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalPaymentAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalTaskAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalTaxAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TotalTransportHandlingUnitQuantityType(
+    UnqualifiedDataTypes1QuantityType
+):
+    pass
+
+
+@dataclass(kw_only=True)
+class TraceIdtype(IdentifierType):
+    class Meta:
+        name = "TraceIDType"
+
+
+@dataclass(kw_only=True)
+class TrackingDeviceCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TrackingIdtype(IdentifierType):
+    class Meta:
+        name = "TrackingIDType"
+
+
+@dataclass(kw_only=True)
+class TradeItemPackingLabelingTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TradeServiceCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TradingRestrictionsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TrailerLicensePlateIdtype(IdentifierType):
+    class Meta:
+        name = "TrailerLicensePlateIDType"
+
+
+@dataclass(kw_only=True)
+class TrainIdtype(IdentifierType):
+    class Meta:
+        name = "TrainIDType"
+
+
+@dataclass(kw_only=True)
+class TransactionCurrencyTaxAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransactionDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransactionIdtype(IdentifierType):
+    class Meta:
+        name = "TransactionIDType"
+
+
+@dataclass(kw_only=True)
+class TransactionTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransitDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransitDirectionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TranslationTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportAuthorizationCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportEmergencyCardCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportEquipmentTypeCodeType(
+    QualifiedDataTypes2TransportEquipmentTypeCodeType
+):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportEventTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportExecutionPlanReferenceIdtype(IdentifierType):
+    class Meta:
+        name = "TransportExecutionPlanReferenceIDType"
+
+
+@dataclass(kw_only=True)
+class TransportExecutionStatusCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportHandlingUnitTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportIndexNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportMeansTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportModeCodeType(QualifiedDataTypes2TransportModeCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportServiceCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportServiceProviderRemarksType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportServiceProviderSpecialTermsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportUserRemarksType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportUserSpecialTermsType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportationServiceDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TransportationServiceDetailsUritype(IdentifierType):
+    class Meta:
+        name = "TransportationServiceDetailsURIType"
+
+
+@dataclass(kw_only=True)
+class TransportationStatusTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TreatmentPathwayCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TuesdayAvailabilityIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TunnelRestrictionCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class TypeIdtype(IdentifierType):
+    class Meta:
+        name = "TypeIDType"
+
+
+@dataclass(kw_only=True)
+class UblversionIdtype(IdentifierType):
+    class Meta:
+        name = "UBLVersionIDType"
+
+
+@dataclass(kw_only=True)
+class UndgcodeType(UnqualifiedDataTypes1CodeType):
+    class Meta:
+        name = "UNDGCodeType"
+
+
+@dataclass(kw_only=True)
+class UnpackingGroupCodeType(UnqualifiedDataTypes1CodeType):
+    class Meta:
+        name = "UNPackingGroupCodeType"
+
+
+@dataclass(kw_only=True)
+class UnpackingGroupType(UnqualifiedDataTypes1TextType):
+    class Meta:
+        name = "UNPackingGroupType"
+
+
+@dataclass(kw_only=True)
+class Uritype(IdentifierType):
+    class Meta:
+        name = "URIType"
+
+
+@dataclass(kw_only=True)
+class Uuidtype(IdentifierType):
+    class Meta:
+        name = "UUIDType"
+
+
+@dataclass(kw_only=True)
+class UnknownPriceIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class UpperOrangeHazardPlacardIdtype(IdentifierType):
+    class Meta:
+        name = "UpperOrangeHazardPlacardIDType"
+
+
+@dataclass(kw_only=True)
+class UrgencyCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class UtilityStatementTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValidIsscindicatorType(IndicatorType):
+    class Meta:
+        name = "ValidISSCIndicatorType"
+
+
+@dataclass(kw_only=True)
+class ValidSanitationCertificateOnBoardIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValidateProcessType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValidateToolType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValidateToolVersionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValidatedCriterionPropertyIdtype(IdentifierType):
+    class Meta:
+        name = "ValidatedCriterionPropertyIDType"
+
+
+@dataclass(kw_only=True)
+class ValidationDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValidationResultCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValidationTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValidatorIdtype(IdentifierType):
+    class Meta:
+        name = "ValidatorIDType"
+
+
+@dataclass(kw_only=True)
+class ValidityStartDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValueAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValueBaseMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValueCurrencyCodeType(QualifiedDataTypes2CurrencyCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValueDataTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValueFactorNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValueMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValueQualifierType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValueQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValueType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class ValueUnitCodeType(UnitOfMeasureCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class VarianceQuantityType(UnqualifiedDataTypes1QuantityType):
+    pass
+
+
+@dataclass(kw_only=True)
+class VariantConstraintCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class VariantConstraintIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class VariantIdtype(IdentifierType):
+    class Meta:
+        name = "VariantIDType"
+
+
+@dataclass(kw_only=True)
+class VersionIdtype(IdentifierType):
+    class Meta:
+        name = "VersionIDType"
+
+
+@dataclass(kw_only=True)
+class VesselIdtype(IdentifierType):
+    class Meta:
+        name = "VesselIDType"
+
+
+@dataclass(kw_only=True)
+class VesselNameType(UnqualifiedDataTypes1NameType):
+    pass
+
+
+@dataclass(kw_only=True)
+class VisitDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class VolumeMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WarrantyInformationType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WasteMeasureType(UnqualifiedDataTypes1MeasureType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WasteMovementTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WasteNotificationTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WasteTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WasteTypeDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WaybillTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WebSiteTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WebsiteUritype(IdentifierType):
+    class Meta:
+        name = "WebsiteURIType"
+
+
+@dataclass(kw_only=True)
+class WednesdayAvailabilityIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WeekDayCodeType(QualifiedDataTypes2WeekDayCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WeighingDateType(UnqualifiedDataTypes1DateType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WeighingDeviceIdtype(IdentifierType):
+    class Meta:
+        name = "WeighingDeviceIDType"
+
+
+@dataclass(kw_only=True)
+class WeighingDeviceTypeType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WeighingMethodCodeType(QualifiedDataTypes2WeighingMethodCodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WeighingTimeType(TimeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WeightNumericType(NumericType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WeightScoringMethodologyNoteType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WeightStatementTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WeightType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WeightingAlgorithmCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WeightingConsiderationDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WeightingTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WithdrawOfferIndicatorType(IndicatorType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WithholdingTaxTotalAmountType(UnqualifiedDataTypes1AmountType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WorkItemDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WorkItemIdtype(IdentifierType):
+    class Meta:
+        name = "WorkItemIDType"
+
+
+@dataclass(kw_only=True)
+class WorkPhaseCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WorkPhaseType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WorkTypeCodeType(UnqualifiedDataTypes1CodeType):
+    pass
+
+
+@dataclass(kw_only=True)
+class WorkTypeDescriptionType(UnqualifiedDataTypes1TextType):
+    pass
+
+
+@dataclass(kw_only=True)
+class XpathType(UnqualifiedDataTypes1TextType):
+    class Meta:
+        name = "XPathType"
+
+
+@dataclass(kw_only=True)
+class AcceptanceIndicator(AcceptanceIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AcceptedIndicator(AcceptedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AcceptedVariantsDescription(AcceptedVariantsDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AccessToolsUri(AccessToolsUritype):
+    class Meta:
+        name = "AccessToolsURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AccountFormatCode(AccountFormatCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AccountId(AccountIdtype):
+    class Meta:
+        name = "AccountID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AccountTypeCode(AccountTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AccountingCost(AccountingCostType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AccountingCostCode(AccountingCostCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ActionCode(ActionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ActivityLevelMeasure(ActivityLevelMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ActivityType(ActivityTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ActivityTypeCode(ActivityTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ActualDeliveryDate(ActualDeliveryDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ActualDeliveryTime(ActualDeliveryTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ActualDespatchDate(ActualDespatchDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ActualDespatchTime(ActualDespatchTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ActualPickupDate(ActualPickupDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ActualPickupTime(ActualPickupTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ActualTemperatureReductionQuantity(
+    ActualTemperatureReductionQuantityType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AdValoremIndicator(AdValoremIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AdditionalAccountId(AdditionalAccountIdtype):
+    class Meta:
+        name = "AdditionalAccountID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AdditionalConditions(AdditionalConditionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AdditionalInformation(AdditionalInformationType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AdditionalMattersDescription(AdditionalMattersDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AdditionalStreetName(AdditionalStreetNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AddressFormatCode(AddressFormatCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AddressTypeCode(AddressTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AdjustmentReasonCode(AdjustmentReasonCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AdmissionCode(AdmissionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AdvertisementAmount(AdvertisementAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AgencyId(AgencyIdtype):
+    class Meta:
+        name = "AgencyID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AgencyName(AgencyNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AgreementTypeCode(AgreementTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AirFlowPercent(AirFlowPercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AircraftId(AircraftIdtype):
+    class Meta:
+        name = "AircraftID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AliasName(AliasNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AllocatedEnergyMeasure(AllocatedEnergyMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AllowanceChargeReason(AllowanceChargeReasonType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AllowanceChargeReasonCode(AllowanceChargeReasonCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AllowanceTotalAmount(AllowanceTotalAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AllowanceTotalTaxInclusiveAmount(AllowanceTotalTaxInclusiveAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AltitudeMeasure(AltitudeMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Amount(AmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AmountRate(AmountRateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AnimalFoodApprovedIndicator(AnimalFoodApprovedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AnimalFoodIndicator(AnimalFoodIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AnnotationContent(AnnotationContentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AnnualAverageAmount(AnnualAverageAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AntennaLocus(AntennaLocusType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ApplicableCategory(ApplicableCategoryType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ApplicableCategoryCode(ApplicableCategoryCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ApplicationDate(ApplicationDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ApplicationStatusCode(ApplicationStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ApprovalDate(ApprovalDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ApprovalStatus(ApprovalStatusType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Article(ArticleType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AtAnchorageIndicator(AtAnchorageIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AttributeId(AttributeIdtype):
+    class Meta:
+        name = "AttributeID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AuctionConstraintIndicator(AuctionConstraintIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AuctionUri(AuctionUritype):
+    class Meta:
+        name = "AuctionURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AuthorizationId(AuthorizationIdtype):
+    class Meta:
+        name = "AuthorizationID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AvailabilityDate(AvailabilityDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AvailabilityStatusCode(AvailabilityStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AvailabilityTimePercent(AvailabilityTimePercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AverageAmount(AverageAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AverageSubsequentContractAmount(AverageSubsequentContractAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AwardDate(AwardDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AwardId(AwardIdtype):
+    class Meta:
+        name = "AwardID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AwardTime(AwardTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AwardingCriterionDescription(AwardingCriterionDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AwardingCriterionId(AwardingCriterionIdtype):
+    class Meta:
+        name = "AwardingCriterionID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AwardingCriterionTypeCode(AwardingCriterionTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class AwardingMethodTypeCode(AwardingMethodTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BackOrderAllowedIndicator(BackOrderAllowedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BackorderQuantity(BackorderQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BackorderReason(BackorderReasonType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BalanceAmount(BalanceAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BalanceBroughtForwardIndicator(BalanceBroughtForwardIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BarcodeSymbologyId(BarcodeSymbologyIdtype):
+    class Meta:
+        name = "BarcodeSymbologyID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BaseAmount(BaseAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BaseQuantity(BaseQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BaseUnitMeasure(BaseUnitMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BasedOnConsensusIndicator(BasedOnConsensusIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BasicConsumedQuantity(BasicConsumedQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BatchQuantity(BatchQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BestBeforeDate(BestBeforeDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BindingOnBuyerIndicator(BindingOnBuyerIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BirthDate(BirthDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BirthplaceName(BirthplaceNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BlockName(BlockNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BlockchainId(BlockchainIdtype):
+    class Meta:
+        name = "BlockchainID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BrandName(BrandNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BriefDescription(BriefDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BrokerAssignedId(BrokerAssignedIdtype):
+    class Meta:
+        name = "BrokerAssignedID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BudgetYearNumeric(BudgetYearNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BuildingName(BuildingNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BuildingNumber(BuildingNumberType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BulkCargoIndicator(BulkCargoIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BuriedAtSeaIndicator(BuriedAtSeaIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BusinessClassificationEvidenceId(BusinessClassificationEvidenceIdtype):
+    class Meta:
+        name = "BusinessClassificationEvidenceID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BusinessIdentityEvidenceId(BusinessIdentityEvidenceIdtype):
+    class Meta:
+        name = "BusinessIdentityEvidenceID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BuyerEventId(BuyerEventIdtype):
+    class Meta:
+        name = "BuyerEventID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BuyerProfileUri(BuyerProfileUritype):
+    class Meta:
+        name = "BuyerProfileURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BuyerReference(BuyerReferenceType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class BuyerReferenceCode(BuyerReferenceCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Cv2Id(Cv2Idtype):
+    class Meta:
+        name = "CV2ID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CabotageIndicator(CabotageIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CalculationExpression(CalculationExpressionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CalculationExpressionCode(CalculationExpressionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CalculationMethodCode(CalculationMethodCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CalculationRate(CalculationRateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CalculationSequenceNumeric(CalculationSequenceNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CallBaseAmount(CallBaseAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CallDate(CallDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CallExtensionAmount(CallExtensionAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CallTime(CallTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CancellationNote(CancellationNoteType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CandidateReductionConstraintIndicator(
+    CandidateReductionConstraintIndicatorType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CandidateStatement(CandidateStatementType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CanonicalizationMethod(CanonicalizationMethodType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CapabilityTypeCode(CapabilityTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CardChipCode(CardChipCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CardTypeCode(CardTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CargoAndBallastTankConditionDescription(
+    CargoAndBallastTankConditionDescriptionType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CargoTypeCode(CargoTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CarrierAssignedId(CarrierAssignedIdtype):
+    class Meta:
+        name = "CarrierAssignedID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CarrierServiceInstructions(CarrierServiceInstructionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CashChangeAmount(CashChangeAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CatalogueIndicator(CatalogueIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CategoryName(CategoryNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CertificateReferenceId(CertificateReferenceIdtype):
+    class Meta:
+        name = "CertificateReferenceID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CertificateType(CertificateTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CertificateTypeCode(CertificateTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CertificateUri(CertificateUritype):
+    class Meta:
+        name = "CertificateURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CertificationLevelDescription(CertificationLevelDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ChangeConditions(ChangeConditionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Channel(ChannelType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ChannelCode(ChannelCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CharacterSetCode(CharacterSetCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Characteristics(CharacteristicsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ChargeBearerCode(ChargeBearerCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ChargeIndicator(ChargeIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ChargeTotalAmount(ChargeTotalAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ChargeTotalTaxInclusiveAmount(ChargeTotalTaxInclusiveAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ChargeableQuantity(ChargeableQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ChargeableWeightMeasure(ChargeableWeightMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ChildConsignmentQuantity(ChildConsignmentQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ChipApplicationId(ChipApplicationIdtype):
+    class Meta:
+        name = "ChipApplicationID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CircularityTypeCode(CircularityTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CityName(CityNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CitySubdivisionName(CitySubdivisionNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Code(CodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CodeValue(CodeValueType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CollaborationPriorityCode(CollaborationPriorityCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Comment(CommentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CommodityCode(CommodityCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CompanyId(CompanyIdtype):
+    class Meta:
+        name = "CompanyID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CompanyLegalForm(CompanyLegalFormType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CompanyLegalFormCode(CompanyLegalFormCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CompanyLiquidationStatusCode(CompanyLiquidationStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ComparedValueMeasure(ComparedValueMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ComparisonDataCode(ComparisonDataCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ComparisonDataSourceCode(ComparisonDataSourceCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ComparisonForecastIssueDate(ComparisonForecastIssueDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ComparisonForecastIssueTime(ComparisonForecastIssueTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CompletionIndicator(CompletionIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CompletionPercent(CompletionPercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Condition(ConditionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConditionCode(ConditionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Conditions(ConditionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConditionsDescription(ConditionsDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConfidentialityLevelCode(ConfidentialityLevelCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsigneeAssignedId(ConsigneeAssignedIdtype):
+    class Meta:
+        name = "ConsigneeAssignedID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsignmentQuantity(ConsignmentQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsignorAssignedId(ConsignorAssignedIdtype):
+    class Meta:
+        name = "ConsignorAssignedID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsolidatableIndicator(ConsolidatableIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsolidatedIndicator(ConsolidatedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConstitutionCode(ConstitutionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsumerIncentiveTacticTypeCode(ConsumerIncentiveTacticTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsumerUnitQuantity(ConsumerUnitQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsumersEnergyLevel(ConsumersEnergyLevelType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsumersEnergyLevelCode(ConsumersEnergyLevelCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsumptionEnergyQuantity(ConsumptionEnergyQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsumptionId(ConsumptionIdtype):
+    class Meta:
+        name = "ConsumptionID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsumptionLevel(ConsumptionLevelType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsumptionLevelCode(ConsumptionLevelCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsumptionMeasure(ConsumptionMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsumptionReportId(ConsumptionReportIdtype):
+    class Meta:
+        name = "ConsumptionReportID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsumptionType(ConsumptionTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsumptionTypeCode(ConsumptionTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ConsumptionWaterQuantity(ConsumptionWaterQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ContainerizedIndicator(ContainerizedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Content(ContentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ContentUnitQuantity(ContentUnitQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ContractFolderId(ContractFolderIdtype):
+    class Meta:
+        name = "ContractFolderID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ContractName(ContractNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ContractSubdivision(ContractSubdivisionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ContractType(ContractTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ContractTypeCode(ContractTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ContractedCarrierAssignedId(ContractedCarrierAssignedIdtype):
+    class Meta:
+        name = "ContractedCarrierAssignedID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ContractingSystemCode(ContractingSystemCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ContractingSystemTypeCode(ContractingSystemTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CoordinateSystemCode(CoordinateSystemCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CopyIndicator(CopyIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CopyQualityTypeCode(CopyQualityTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CorporateRegistrationTypeCode(CorporateRegistrationTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CorporateStockAmount(CorporateStockAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CorrectionAmount(CorrectionAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CorrectionType(CorrectionTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CorrectionTypeCode(CorrectionTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CorrectionUnitAmount(CorrectionUnitAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CountrySubentity(CountrySubentityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CountrySubentityCode(CountrySubentityCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CourseOverGroundDirection(CourseOverGroundDirectionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CreditLineAmount(CreditLineAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CreditNoteTypeCode(CreditNoteTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CreditedQuantity(CreditedQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CrewQuantity(CrewQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CriterionDescription(CriterionDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CriterionTypeCode(CriterionTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CurrencyCode(CurrencyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CurrentChargeType(CurrentChargeTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CurrentChargeTypeCode(CurrentChargeTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CurrentOperatingSecurityLevelCode(CurrentOperatingSecurityLevelCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CustomerAssignedAccountId(CustomerAssignedAccountIdtype):
+    class Meta:
+        name = "CustomerAssignedAccountID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CustomerReference(CustomerReferenceType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CustomizationId(CustomizationIdtype):
+    class Meta:
+        name = "CustomizationID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CustomsClearanceServiceInstructions(
+    CustomsClearanceServiceInstructionsType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CustomsImportClassifiedIndicator(CustomsImportClassifiedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CustomsProcedureCode(CustomsProcedureCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CustomsStatusCode(CustomsStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class CustomsTariffQuantity(CustomsTariffQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DamageRemarks(DamageRemarksType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DangerousGoodsApprovedIndicator(DangerousGoodsApprovedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DataSendingCapability(DataSendingCapabilityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DataSourceCode(DataSourceCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Date(DateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DebitLineAmount(DebitLineAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DebitNoteTypeCode(DebitNoteTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DebitedQuantity(DebitedQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DeclarationTypeCode(DeclarationTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DeclaredCarriageValueAmount(DeclaredCarriageValueAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DeclaredCustomsValueAmount(DeclaredCustomsValueAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DeclaredForCarriageValueAmount(DeclaredForCarriageValueAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DeclaredStatisticsValueAmount(DeclaredStatisticsValueAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DeductibleAmount(DeductibleAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DefaultLanguageCode(DefaultLanguageCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DeliveredQuantity(DeliveredQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DeliveryAcceptanceCode(DeliveryAcceptanceCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DeliveryInstructions(DeliveryInstructionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DemurrageInstructions(DemurrageInstructionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Department(DepartmentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Description(DescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DescriptionCode(DescriptionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DespatchAdviceTypeCode(DespatchAdviceTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DiedIndicator(DiedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DifferenceTemperatureReductionQuantity(
+    DifferenceTemperatureReductionQuantityType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DirectionCode(DirectionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DisplayTacticTypeCode(DisplayTacticTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DispositionCode(DispositionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DistributionType(DistributionTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DistributionTypeCode(DistributionTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class District(DistrictType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DocumentCurrencyCode(DocumentCurrencyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DocumentDescription(DocumentDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DocumentHash(DocumentHashType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DocumentId(DocumentIdtype):
+    class Meta:
+        name = "DocumentID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DocumentStatusCode(DocumentStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DocumentStatusReasonCode(DocumentStatusReasonCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DocumentStatusReasonDescription(DocumentStatusReasonDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DocumentType(DocumentTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DocumentTypeCode(DocumentTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DocumentationFeeAmount(DocumentationFeeAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DueDate(DueDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DurationMeasure(DurationMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Duty(DutyType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class DutyCode(DutyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EarliestPickupDate(EarliestPickupDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EarliestPickupTime(EarliestPickupTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EconomicOperatorGroupName(EconomicOperatorGroupNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EconomicOperatorRegistryUri(EconomicOperatorRegistryUritype):
+    class Meta:
+        name = "EconomicOperatorRegistryURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EffectDescription(EffectDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EffectiveDate(EffectiveDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EffectiveTime(EffectiveTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ElectronicAddressId(ElectronicAddressIdtype):
+    class Meta:
+        name = "ElectronicAddressID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ElectronicCatalogueUsageIndicator(ElectronicCatalogueUsageIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ElectronicDeviceDescription(ElectronicDeviceDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ElectronicInvoiceAcceptedIndicator(
+    ElectronicInvoiceAcceptedIndicatorType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ElectronicMail(ElectronicMailType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ElectronicOrderUsageIndicator(ElectronicOrderUsageIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ElectronicPaymentUsageIndicator(ElectronicPaymentUsageIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EmbeddedDocument(EmbeddedDocumentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EmbeddedDocumentBinaryObject(EmbeddedDocumentBinaryObjectType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EmergencyProceduresCode(EmergencyProceduresCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EmissionFactorSource(EmissionFactorSourceType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EmissionStandardReference(EmissionStandardReferenceType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EmployeeQuantity(EmployeeQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EncodingCode(EncodingCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EndDate(EndDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EndTime(EndTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EndpointId(EndpointIdtype):
+    class Meta:
+        name = "EndpointID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EndpointUri(EndpointUritype):
+    class Meta:
+        name = "EndpointURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EnergySourceTypeCode(EnergySourceTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EntitySizeCode(EntitySizeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EnvelopeTypeCode(EnvelopeTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EnvironmentalEmissionTypeCode(EnvironmentalEmissionTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EstimatedAmount(EstimatedAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EstimatedConsumedQuantity(EstimatedConsumedQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EstimatedDeliveryDate(EstimatedDeliveryDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EstimatedDeliveryTime(EstimatedDeliveryTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EstimatedDespatchDate(EstimatedDespatchDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EstimatedDespatchTime(EstimatedDespatchTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EstimatedGeneratedUntilNextPortMeasure(
+    EstimatedGeneratedUntilNextPortMeasureType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EstimatedMaximumValueAmount(EstimatedMaximumValueAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EstimatedOverallContractAmount(EstimatedOverallContractAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EstimatedOverallContractQuantity(EstimatedOverallContractQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EstimatedOverallFrameworkContractsAmount(
+    EstimatedOverallFrameworkContractsAmountType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EstimatedTimingFurtherPublication(EstimatedTimingFurtherPublicationType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EvacuatedIndicator(EvacuatedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EvaluationCriterionTypeCode(EvaluationCriterionTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EvaluationMethodTypeCode(EvaluationMethodTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class EvidenceTypeCode(EvidenceTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExceptionResolutionCode(ExceptionResolutionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExceptionStatusCode(ExceptionStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExcessAmount(ExcessAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExchangeMarketId(ExchangeMarketIdtype):
+    class Meta:
+        name = "ExchangeMarketID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExchangeMethodCode(ExchangeMethodCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExchangeNetworkId(ExchangeNetworkIdtype):
+    class Meta:
+        name = "ExchangeNetworkID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExchangedPercent(ExchangedPercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExclusionReason(ExclusionReasonType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExecutionRequirementCode(ExecutionRequirementCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExemptionReason(ExemptionReasonType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExemptionReasonCode(ExemptionReasonCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExpectedAmount(ExpectedAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExpectedAnchorageIndicator(ExpectedAnchorageIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExpectedCode(ExpectedCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExpectedDescription(ExpectedDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExpectedId(ExpectedIdtype):
+    class Meta:
+        name = "ExpectedID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExpectedIndicator(ExpectedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExpectedOperatorQuantity(ExpectedOperatorQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExpectedQuantity(ExpectedQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExpectedUri(ExpectedUritype):
+    class Meta:
+        name = "ExpectedURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExpectedValueNumeric(ExpectedValueNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExpenseCode(ExpenseCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExpiryDate(ExpiryDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExpiryTime(ExpiryTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExportReason(ExportReasonType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExportReasonCode(ExportReasonCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExportTypeCode(ExportTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Expression(ExpressionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExpressionCode(ExpressionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ExtendedId(ExtendedIdtype):
+    class Meta:
+        name = "ExtendedID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Extension(ExtensionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FaceValueAmount(FaceValueAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FamilyName(FamilyNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FeatureTacticTypeCode(FeatureTacticTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FeeAmount(FeeAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FeeDescription(FeeDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FeeTypeCode(FeeTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FileName(FileNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FinalReexportationDate(FinalReexportationDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FinancingInstrumentCode(FinancingInstrumentCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FirstName(FirstNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FirstShipmentAvailabilityDate(FirstShipmentAvailabilityDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FirstShipmentAvailibilityDate(FirstShipmentAvailibilityDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FissileCriticalitySafetyIndexNumeric(
+    FissileCriticalitySafetyIndexNumericType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Floor(FloorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FollowupContractIndicator(FollowupContractIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ForecastPurposeCode(ForecastPurposeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ForecastTypeCode(ForecastTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FormatCode(FormatCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FormatId(FormatIdtype):
+    class Meta:
+        name = "FormatID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ForwarderServiceInstructions(ForwarderServiceInstructionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FreeOfChargeIndicator(FreeOfChargeIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FreeOnBoardValueAmount(FreeOnBoardValueAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FreightForwarderAssignedId(FreightForwarderAssignedIdtype):
+    class Meta:
+        name = "FreightForwarderAssignedID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FreightRateClassCode(FreightRateClassCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Frequency(FrequencyType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FridayAvailabilityIndicator(FridayAvailabilityIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FrozenDocumentIndicator(FrozenDocumentIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FrozenPeriodDaysNumeric(FrozenPeriodDaysNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FuelConsumptionMeasure(FuelConsumptionMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FuelType(FuelTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FuelTypeCode(FuelTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FulfilmentIndicator(FulfilmentIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FulfilmentIndicatorTypeCode(FulfilmentIndicatorTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FullnessIndicationCode(FullnessIndicationCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FullyPaidSharesIndicator(FullyPaidSharesIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FumigatedCargoTransportIndicator(FumigatedCargoTransportIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FunctionCode(FunctionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FundingProgram(FundingProgramType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class FundingProgramCode(FundingProgramCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GasPressureQuantity(GasPressureQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GateId(GateIdtype):
+    class Meta:
+        name = "GateID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GenderCode(GenderCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GeneralCargoIndicator(GeneralCargoIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GivenTreatmentDescription(GivenTreatmentDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GoodsItemPassportCounterfoilId(GoodsItemPassportCounterfoilIdtype):
+    class Meta:
+        name = "GoodsItemPassportCounterfoilID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GoodsItemPassportId(GoodsItemPassportIdtype):
+    class Meta:
+        name = "GoodsItemPassportID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GovernmentAgreementConstraintIndicator(
+    GovernmentAgreementConstraintIndicatorType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GrossMassMeasure(GrossMassMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GrossTonnageMeasure(GrossTonnageMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GrossVolumeMeasure(GrossVolumeMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GrossWeightMeasure(GrossWeightMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GroupType(GroupTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GroupTypeCode(GroupTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GroupingLots(GroupingLotsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GuaranteeTypeCode(GuaranteeTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GuaranteedDespatchDate(GuaranteedDespatchDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class GuaranteedDespatchTime(GuaranteedDespatchTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HandlingCode(HandlingCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HandlingInstructions(HandlingInstructionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HashAlgorithmMethod(HashAlgorithmMethodType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HaulageInstructions(HaulageInstructionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HazardClassId(HazardClassIdtype):
+    class Meta:
+        name = "HazardClassID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HazardousCategoryCode(HazardousCategoryCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HazardousRegulationCode(HazardousRegulationCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HazardousRiskIndicator(HazardousRiskIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HazardousTypeCode(HazardousTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HeatingType(HeatingTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HeatingTypeCode(HeatingTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HigherTenderAmount(HigherTenderAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HolderName(HolderNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HumanFoodApprovedIndicator(HumanFoodApprovedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HumanFoodIndicator(HumanFoodIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class HumidityPercent(HumidityPercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Id(Idtype):
+    class Meta:
+        name = "ID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ImoguidelinesOnBoardIndicator(ImoguidelinesOnBoardIndicatorType):
+    class Meta:
+        name = "IMOGuidelinesOnBoardIndicator"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InfshipClassCode(InfshipClassCodeType):
+    class Meta:
+        name = "INFShipClassCode"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class IsscabsenceReason(IsscabsenceReasonType):
+    class Meta:
+        name = "ISSCAbsenceReason"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class IsscexpiryDate(IsscexpiryDateType):
+    class Meta:
+        name = "ISSCExpiryDate"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class IdentificationCode(IdentificationCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class IdentificationId(IdentificationIdtype):
+    class Meta:
+        name = "IdentificationID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ImmobilizationCertificateId(ImmobilizationCertificateIdtype):
+    class Meta:
+        name = "ImmobilizationCertificateID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ImpactCode(ImpactCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ImportanceCode(ImportanceCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class IndicationIndicator(IndicationIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class IndustryClassificationCode(IndustryClassificationCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InfectiousDiseaseCaseOnBoardIndicator(
+    InfectiousDiseaseCaseOnBoardIndicatorType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Information(InformationType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InformationUri(InformationUritype):
+    class Meta:
+        name = "InformationURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InhalationToxicityZoneCode(InhalationToxicityZoneCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InhouseMail(InhouseMailType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InitiatingPartyIndicator(InitiatingPartyIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InspectionMethodCode(InspectionMethodCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InstallmentDueDate(InstallmentDueDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InstructionId(InstructionIdtype):
+    class Meta:
+        name = "InstructionID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InstructionNote(InstructionNoteType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Instructions(InstructionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InsurancePremiumAmount(InsurancePremiumAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InsuranceTypeCode(InsuranceTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InsuranceTypeDescription(InsuranceTypeDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InsuranceValueAmount(InsuranceValueAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InsuredValueAmount(InsuredValueAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InterestRatePercent(InterestRatePercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InventoryValueAmount(InventoryValueAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InvoiceTypeCode(InvoiceTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InvoicedQuantity(InvoicedQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class InvoicingPartyReference(InvoicingPartyReferenceType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class IssueDate(IssueDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class IssueNumberId(IssueNumberIdtype):
+    class Meta:
+        name = "IssueNumberID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class IssueTime(IssueTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class IssuerId(IssuerIdtype):
+    class Meta:
+        name = "IssuerID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class IssuerScopeId(IssuerScopeIdtype):
+    class Meta:
+        name = "IssuerScopeID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ItemClassificationCode(ItemClassificationCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ItemTypeCode(ItemTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ItemUpdateRequestIndicator(ItemUpdateRequestIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class JobTitle(JobTitleType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class JoinedShipDate(JoinedShipDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class JourneyId(JourneyIdtype):
+    class Meta:
+        name = "JourneyID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class JurisdictionLevel(JurisdictionLevelType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Justification(JustificationType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class JustificationDescription(JustificationDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Keyword(KeywordType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LanguageId(LanguageIdtype):
+    class Meta:
+        name = "LanguageID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LastDrinkingWaterAnalysisDate(LastDrinkingWaterAnalysisDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LastRevisionDate(LastRevisionDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LastRevisionTime(LastRevisionTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LatestDeliveryDate(LatestDeliveryDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LatestDeliveryTime(LatestDeliveryTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LatestMeterQuantity(LatestMeterQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LatestMeterReadingDate(LatestMeterReadingDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LatestMeterReadingMethod(LatestMeterReadingMethodType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LatestMeterReadingMethodCode(LatestMeterReadingMethodCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LatestPickupDate(LatestPickupDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LatestPickupTime(LatestPickupTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LatestProposalAcceptanceDate(LatestProposalAcceptanceDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LatestReplyDate(LatestReplyDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LatestReplyTime(LatestReplyTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LatestSecurityClearanceDate(LatestSecurityClearanceDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LatitudeDegreesMeasure(LatitudeDegreesMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LatitudeDirectionCode(LatitudeDirectionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LatitudeMinutesMeasure(LatitudeMinutesMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LeadTimeMeasure(LeadTimeMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LegalReference(LegalReferenceType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LegalStatusIndicator(LegalStatusIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LiabilityAmount(LiabilityAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LicensePlateId(LicensePlateIdtype):
+    class Meta:
+        name = "LicensePlateID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LifeCycleStatusCode(LifeCycleStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LifecycleStageCode(LifecycleStageCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LifecycleStageDescription(LifecycleStageDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LimitationDescription(LimitationDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Line(LineType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LineCountNumeric(LineCountNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LineExtensionAmount(LineExtensionAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LineId(LineIdtype):
+    class Meta:
+        name = "LineID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LineNumberNumeric(LineNumberNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LineStatusCode(LineStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ListValue(ListValueType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LivestockIndicator(LivestockIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LoadingLengthMeasure(LoadingLengthMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LoadingSequenceId(LoadingSequenceIdtype):
+    class Meta:
+        name = "LoadingSequenceID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LocaleCode(LocaleCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Location(LocationType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LocationId(LocationIdtype):
+    class Meta:
+        name = "LocationID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LocationTypeCode(LocationTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Login(LoginType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LogoReferenceId(LogoReferenceIdtype):
+    class Meta:
+        name = "LogoReferenceID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LongitudeDegreesMeasure(LongitudeDegreesMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LongitudeDirectionCode(LongitudeDirectionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LongitudeMinutesMeasure(LongitudeMinutesMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LossRisk(LossRiskType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LossRiskResponsibilityCode(LossRiskResponsibilityCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LotNumberId(LotNumberIdtype):
+    class Meta:
+        name = "LotNumberID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LotsGroupId(LotsGroupIdtype):
+    class Meta:
+        name = "LotsGroupID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LowTendersDescription(LowTendersDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LowerOrangeHazardPlacardId(LowerOrangeHazardPlacardIdtype):
+    class Meta:
+        name = "LowerOrangeHazardPlacardID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class LowerTenderAmount(LowerTenderAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MmsiregistrationId(MmsiregistrationIdtype):
+    class Meta:
+        name = "MMSIRegistrationID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaintenanceFrequencyCode(MaintenanceFrequencyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaintenanceFrequencyDescription(MaintenanceFrequencyDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ManagementPlanImplementedIndicator(
+    ManagementPlanImplementedIndicatorType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ManagementPlanOnBoardIndicator(ManagementPlanOnBoardIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MandateTypeCode(MandateTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ManifestType(ManifestTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ManifestTypeCode(ManifestTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ManufactureDate(ManufactureDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ManufactureTime(ManufactureTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaritimePollutantCode(MaritimePollutantCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MarkAttention(MarkAttentionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MarkAttentionIndicator(MarkAttentionIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MarkCare(MarkCareType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MarkCareIndicator(MarkCareIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MarketCode(MarketCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MarketName(MarketNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MarketValueAmount(MarketValueAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MarkingId(MarkingIdtype):
+    class Meta:
+        name = "MarkingID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MathematicOperatorCode(MathematicOperatorCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaxDedicatedStorageCapacityMeasure(
+    MaxDedicatedStorageCapacityMeasureType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumAdvertisementAmount(MaximumAdvertisementAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumAmount(MaximumAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumBackorderQuantity(MaximumBackorderQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumCopiesNumeric(MaximumCopiesNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumDataLossDurationMeasure(MaximumDataLossDurationMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumIncidentNotificationDurationMeasure(
+    MaximumIncidentNotificationDurationMeasureType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumLotsAwardedNumeric(MaximumLotsAwardedNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumLotsSubmittedNumeric(MaximumLotsSubmittedNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumMeasure(MaximumMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumNumberNumeric(MaximumNumberNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumOperatorQuantity(MaximumOperatorQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumOrderQuantity(MaximumOrderQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumOriginalsNumeric(MaximumOriginalsNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumPaidAmount(MaximumPaidAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumPaymentInstructionsNumeric(MaximumPaymentInstructionsNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumPercent(MaximumPercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumQuantity(MaximumQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumValue(MaximumValueType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumValueAmount(MaximumValueAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumValueNumeric(MaximumValueNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MaximumVariantQuantity(MaximumVariantQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MeanTimeToRecoverDurationMeasure(MeanTimeToRecoverDurationMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Measure(MeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MeasureCode(MeasureCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MedicalFirstAidGuideCode(MedicalFirstAidGuideCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MedicalPractitionerConsultedIndicator(
+    MedicalPractitionerConsultedIndicatorType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MerchantId(MerchantIdtype):
+    class Meta:
+        name = "MerchantID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MessageFormat(MessageFormatType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MeterConstant(MeterConstantType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MeterConstantCode(MeterConstantCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MeterName(MeterNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MeterNumber(MeterNumberType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MeterReadingComments(MeterReadingCommentsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MeterReadingType(MeterReadingTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MeterReadingTypeCode(MeterReadingTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MiddleName(MiddleNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MimeCode(MimeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MinimumAmount(MinimumAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MinimumBackorderQuantity(MinimumBackorderQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MinimumDownTimeScheduleDurationMeasure(
+    MinimumDownTimeScheduleDurationMeasureType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MinimumImprovementBid(MinimumImprovementBidType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MinimumInventoryQuantity(MinimumInventoryQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MinimumMeasure(MinimumMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MinimumNumberNumeric(MinimumNumberNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MinimumOrderQuantity(MinimumOrderQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MinimumPercent(MinimumPercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MinimumQuantity(MinimumQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MinimumResponseTimeDurationMeasure(
+    MinimumResponseTimeDurationMeasureType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MinimumValue(MinimumValueType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MinimumValueNumeric(MinimumValueNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MiscellaneousEventTypeCode(MiscellaneousEventTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ModelName(ModelNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ModificationReasonCode(ModificationReasonCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ModificationReasonDescription(ModificationReasonDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MondayAvailabilityIndicator(MondayAvailabilityIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MonetaryScope(MonetaryScopeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MoreIllThanExpectedIndicator(MoreIllThanExpectedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MovieTitle(MovieTitleType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MultipleOrderQuantity(MultipleOrderQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MultipleTendersCode(MultipleTendersCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class MultiplierFactorNumeric(MultiplierFactorNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Name(NameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NameCode(NameCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NameSuffix(NameSuffixType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NationalId(NationalIdtype):
+    class Meta:
+        name = "NationalID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NationalityCode(NationalityCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NationalityId(NationalityIdtype):
+    class Meta:
+        name = "NationalityID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NatureCode(NatureCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NatureOfIllnessDescription(NatureOfIllnessDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NatureOfTransactionCode(NatureOfTransactionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NavigationStatusCode(NavigationStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NegotiationDescription(NegotiationDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NetNetWeightMeasure(NetNetWeightMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NetTonnageMeasure(NetTonnageMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NetVolumeMeasure(NetVolumeMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NetWeightMeasure(NetWeightMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NetworkId(NetworkIdtype):
+    class Meta:
+        name = "NetworkID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NoControlActionsReason(NoControlActionsReasonType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NoFurtherNegotiationIndicator(NoFurtherNegotiationIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NominationDate(NominationDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NominationTime(NominationTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NormalTemperatureReductionQuantity(
+    NormalTemperatureReductionQuantityType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Note(NoteType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NoticeLanguageCode(NoticeLanguageCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NoticeTypeCode(NoticeTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class NotificationTypeCode(NotificationTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Oid(Oidtype):
+    class Meta:
+        name = "OID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OccurrenceDate(OccurrenceDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OccurrenceTime(OccurrenceTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OfficialUse(OfficialUseType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OnCarriageIndicator(OnCarriageIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OneTimeChargeType(OneTimeChargeTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OneTimeChargeTypeCode(OneTimeChargeTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OnsetDate(OnsetDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OntologyUri(OntologyUritype):
+    class Meta:
+        name = "OntologyURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OpenTenderId(OpenTenderIdtype):
+    class Meta:
+        name = "OpenTenderID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OperatingYearsQuantity(OperatingYearsQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OptionalLineItemIndicator(OptionalLineItemIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OptionsDescription(OptionsDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OrderIntervalDaysNumeric(OrderIntervalDaysNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OrderQuantityIncrementNumeric(OrderQuantityIncrementNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OrderResponseCode(OrderResponseCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OrderTypeCode(OrderTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OrderableIndicator(OrderableIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OrderableUnit(OrderableUnitType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OrderableUnitFactorRate(OrderableUnitFactorRateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OrganizationDepartment(OrganizationDepartmentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OriginalContractingSystemId(OriginalContractingSystemIdtype):
+    class Meta:
+        name = "OriginalContractingSystemID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OriginalJobId(OriginalJobIdtype):
+    class Meta:
+        name = "OriginalJobID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OtherConditionsIndicator(OtherConditionsIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OtherControlActions(OtherControlActionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OtherInstruction(OtherInstructionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OtherName(OtherNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OutstandingQuantity(OutstandingQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OutstandingReason(OutstandingReasonType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OversupplyQuantity(OversupplyQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class OwnerTypeCode(OwnerTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PackLevelCode(PackLevelCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PackQuantity(PackQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PackSizeNumeric(PackSizeNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PackageLevelCode(PackageLevelCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PackagingDangerLevelCode(PackagingDangerLevelCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PackagingType(PackagingTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PackagingTypeCode(PackagingTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PackingCriteriaCode(PackingCriteriaCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PackingMaterial(PackingMaterialType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaidAmount(PaidAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaidCashAmount(PaidCashAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaidDate(PaidDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaidTime(PaidTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ParentDocumentId(ParentDocumentIdtype):
+    class Meta:
+        name = "ParentDocumentID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ParentDocumentLineReferenceId(ParentDocumentLineReferenceIdtype):
+    class Meta:
+        name = "ParentDocumentLineReferenceID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ParentDocumentTypeCode(ParentDocumentTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ParentDocumentVersionId(ParentDocumentVersionIdtype):
+    class Meta:
+        name = "ParentDocumentVersionID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PartPresentationCode(PartPresentationCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PartecipationPercent(PartecipationPercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PartialDeliveryIndicator(PartialDeliveryIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ParticipantId(ParticipantIdtype):
+    class Meta:
+        name = "ParticipantID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ParticipationPercent(ParticipationPercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PartyCapacityAmount(PartyCapacityAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PartyType(PartyTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PartyTypeCode(PartyTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PassengerQuantity(PassengerQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Password(PasswordType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PayPerView(PayPerViewType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PayableAlternativeAmount(PayableAlternativeAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PayableAmount(PayableAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PayableRoundingAmount(PayableRoundingAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PayerReference(PayerReferenceType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentAlternativeCurrencyCode(PaymentAlternativeCurrencyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentChannelCode(PaymentChannelCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentCurrencyCode(PaymentCurrencyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentDescription(PaymentDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentDueDate(PaymentDueDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentFrequencyCode(PaymentFrequencyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentId(PaymentIdtype):
+    class Meta:
+        name = "PaymentID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentMeansCode(PaymentMeansCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentMeansDescription(PaymentMeansDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentMeansId(PaymentMeansIdtype):
+    class Meta:
+        name = "PaymentMeansID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentNote(PaymentNoteType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentOrderReference(PaymentOrderReferenceType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentPercent(PaymentPercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentPlatformId(PaymentPlatformIdtype):
+    class Meta:
+        name = "PaymentPlatformID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentPurposeCode(PaymentPurposeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentRailId(PaymentRailIdtype):
+    class Meta:
+        name = "PaymentRailID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentTerminalId(PaymentTerminalIdtype):
+    class Meta:
+        name = "PaymentTerminalID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PaymentTermsDetailsUri(PaymentTermsDetailsUritype):
+    class Meta:
+        name = "PaymentTermsDetailsURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PenaltyAmount(PenaltyAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PenaltySurchargePercent(PenaltySurchargePercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PerUnitAmount(PerUnitAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Percent(PercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PerformanceMetricTypeCode(PerformanceMetricTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PerformanceValueQuantity(PerformanceValueQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PerformingCarrierAssignedId(PerformingCarrierAssignedIdtype):
+    class Meta:
+        name = "PerformingCarrierAssignedID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PersonalSituation(PersonalSituationType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PhoneNumber(PhoneNumberType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PlacardEndorsement(PlacardEndorsementType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PlacardNotation(PlacardNotationType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PlannedDate(PlannedDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PlannedInspectionsDescription(PlannedInspectionsDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PlannedOperationsDescription(PlannedOperationsDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PlannedWorksDescription(PlannedWorksDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PlotIdentification(PlotIdentificationType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PositionCode(PositionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PositionInPortId(PositionInPortIdtype):
+    class Meta:
+        name = "PositionInPortID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PostEventNotificationDurationMeasure(
+    PostEventNotificationDurationMeasureType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PostalZone(PostalZoneType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Postbox(PostboxType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PowerIndicator(PowerIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PreCarriageIndicator(PreCarriageIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PreEventNotificationDurationMeasure(
+    PreEventNotificationDurationMeasureType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PreferenceCriterionCode(PreferenceCriterionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PreferredLanguageLocaleCode(PreferredLanguageLocaleCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PrepaidAmount(PrepaidAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PrepaidIndicator(PrepaidIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PrepaidPaymentReferenceId(PrepaidPaymentReferenceIdtype):
+    class Meta:
+        name = "PrepaidPaymentReferenceID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PreviousCancellationReasonCode(PreviousCancellationReasonCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PreviousJobId(PreviousJobIdtype):
+    class Meta:
+        name = "PreviousJobID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PreviousMeterQuantity(PreviousMeterQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PreviousMeterReadingDate(PreviousMeterReadingDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PreviousMeterReadingMethod(PreviousMeterReadingMethodType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PreviousMeterReadingMethodCode(PreviousMeterReadingMethodCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PreviousVersionId(PreviousVersionIdtype):
+    class Meta:
+        name = "PreviousVersionID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PriceAmount(PriceAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PriceChangeReason(PriceChangeReasonType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PriceEvaluationCode(PriceEvaluationCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PriceRevisionFormulaDescription(PriceRevisionFormulaDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PriceType(PriceTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PriceTypeCode(PriceTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PricingCurrencyCode(PricingCurrencyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PricingUpdateRequestIndicator(PricingUpdateRequestIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PrimaryAccountNumberId(PrimaryAccountNumberIdtype):
+    class Meta:
+        name = "PrimaryAccountNumberID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PrintQualifier(PrintQualifierType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Priority(PriorityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PrivacyCode(PrivacyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PrivatePartyIndicator(PrivatePartyIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PrizeDescription(PrizeDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PrizeIndicator(PrizeIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProcedureCode(ProcedureCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProcessDescription(ProcessDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProcessReason(ProcessReasonType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProcessReasonCode(ProcessReasonCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProcessingTypeCode(ProcessingTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProcurementSubTypeCode(ProcurementSubTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProcurementType(ProcurementTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProcurementTypeCode(ProcurementTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProductTraceId(ProductTraceIdtype):
+    class Meta:
+        name = "ProductTraceID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProfileExecutionId(ProfileExecutionIdtype):
+    class Meta:
+        name = "ProfileExecutionID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProfileId(ProfileIdtype):
+    class Meta:
+        name = "ProfileID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProfileStatusCode(ProfileStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProgressPercent(ProgressPercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PromotionalEventTypeCode(PromotionalEventTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProperShippingName(ProperShippingNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PropertyGroupTypeCode(PropertyGroupTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProtocolId(ProtocolIdtype):
+    class Meta:
+        name = "ProtocolID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ProviderTypeCode(ProviderTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PublicPartyIndicator(PublicPartyIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PublishAwardIndicator(PublishAwardIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PurchaseDate(PurchaseDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PurchaseTime(PurchaseTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Purpose(PurposeType1):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PurposeCode(PurposeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PurposeType(PurposeTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class PurposeTypeCode(PurposeTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class QualificationApplicationTypeCode(QualificationApplicationTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class QualityControlCode(QualityControlCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Quantity(QuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class QuantityDiscrepancyCode(QuantityDiscrepancyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RadioCallSignId(RadioCallSignIdtype):
+    class Meta:
+        name = "RadioCallSignID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RailCarId(RailCarIdtype):
+    class Meta:
+        name = "RailCarID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Rank(RankType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RankCode(RankCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Rate(RateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RateOfTurnMeasure(RateOfTurnMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReasonCode(ReasonCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReceiptAdviceTypeCode(ReceiptAdviceTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReceivedDate(ReceivedDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReceivedElectronicTenderQuantity(ReceivedElectronicTenderQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReceivedForeignTenderQuantity(ReceivedForeignTenderQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReceivedQuantity(ReceivedQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReceivedTenderQuantity(ReceivedTenderQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReceivedTime(ReceivedTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RecurringProcurementDescription(RecurringProcurementDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RecurringProcurementIndicator(RecurringProcurementIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RecyclabilityPercent(RecyclabilityPercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RecycledContentPercent(RecycledContentPercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Reference(ReferenceType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReferenceDate(ReferenceDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReferenceEventCode(ReferenceEventCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReferenceId(ReferenceIdtype):
+    class Meta:
+        name = "ReferenceID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReferenceTime(ReferenceTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReferencedConsignmentId(ReferencedConsignmentIdtype):
+    class Meta:
+        name = "ReferencedConsignmentID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReferencedDocumentInternalAddress(ReferencedDocumentInternalAddressType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RefrigeratedIndicator(RefrigeratedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RefrigerationOnIndicator(RefrigerationOnIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Region(RegionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RegisteredDate(RegisteredDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RegisteredTime(RegisteredTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RegistrationDate(RegistrationDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RegistrationExpirationDate(RegistrationExpirationDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RegistrationId(RegistrationIdtype):
+    class Meta:
+        name = "RegistrationID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RegistrationName(RegistrationNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RegistrationNationality(RegistrationNationalityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RegistrationNationalityId(RegistrationNationalityIdtype):
+    class Meta:
+        name = "RegistrationNationalityID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RegulatoryDomain(RegulatoryDomainType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReinspectionRequiredIndicator(ReinspectionRequiredIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RejectActionCode(RejectActionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RejectReason(RejectReasonType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RejectReasonCode(RejectReasonCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RejectedQuantity(RejectedQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RejectionNote(RejectionNoteType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReleaseId(ReleaseIdtype):
+    class Meta:
+        name = "ReleaseID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReliabilityPercent(ReliabilityPercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Remarks(RemarksType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReminderSequenceNumeric(ReminderSequenceNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReminderTypeCode(ReminderTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RenewalsIndicator(RenewalsIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReplenishmentOwnerDescription(ReplenishmentOwnerDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReportType(ReportTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReportTypeCode(ReportTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReportedToMedicalOfficerIndicator(ReportedToMedicalOfficerIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RepresentationType(RepresentationTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RepresentationTypeCode(RepresentationTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RequestDate(RequestDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RequestForQuotationLineId(RequestForQuotationLineIdtype):
+    class Meta:
+        name = "RequestForQuotationLineID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RequestTime(RequestTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RequestedDeliveryDate(RequestedDeliveryDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RequestedDespatchDate(RequestedDespatchDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RequestedDespatchTime(RequestedDespatchTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RequestedInvoiceCurrencyCode(RequestedInvoiceCurrencyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RequestedPublicationDate(RequestedPublicationDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RequiredCurriculaCode(RequiredCurriculaCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RequiredCurriculaIndicator(RequiredCurriculaIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RequiredCustomsId(RequiredCustomsIdtype):
+    class Meta:
+        name = "RequiredCustomsID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RequiredDeliveryDate(RequiredDeliveryDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RequiredDeliveryTime(RequiredDeliveryTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RequiredFeeAmount(RequiredFeeAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RequiredResponseMessageLevelCode(RequiredResponseMessageLevelCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResidenceType(ResidenceTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResidenceTypeCode(ResidenceTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResidentOccupantsNumeric(ResidentOccupantsNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Resolution(ResolutionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResolutionCode(ResolutionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResolutionDate(ResolutionDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResolutionTime(ResolutionTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResourceOriginDescription(ResourceOriginDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResourceTypeCode(ResourceTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Response(ResponseType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResponseAmount(ResponseAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResponseBinaryObject(ResponseBinaryObjectType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResponseCode(ResponseCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResponseDate(ResponseDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResponseId(ResponseIdtype):
+    class Meta:
+        name = "ResponseID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResponseIndicator(ResponseIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResponseMeasure(ResponseMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResponseNumeric(ResponseNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResponseQuantity(ResponseQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResponseTime(ResponseTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ResponseUri(ResponseUritype):
+    class Meta:
+        name = "ResponseURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RetailEventName(RetailEventNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RetailEventStatusCode(RetailEventStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RetainedOnBoardMeasure(RetainedOnBoardMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReturnabilityIndicator(ReturnabilityIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReturnableMaterialIndicator(ReturnableMaterialIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ReturnableQuantity(ReturnableQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RevisedForecastLineId(RevisedForecastLineIdtype):
+    class Meta:
+        name = "RevisedForecastLineID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RevisionDate(RevisionDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RevisionStatusCode(RevisionStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RevisionTime(RevisionTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RoamingPartnerName(RoamingPartnerNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RoleCode(RoleCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RoleDescription(RoleDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Room(RoomType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class RoundingAmount(RoundingAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SmesuitableIndicator(SmesuitableIndicatorType):
+    class Meta:
+        name = "SMESuitableIndicator"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SsponBoardIndicator(SsponBoardIndicatorType):
+    class Meta:
+        name = "SSPOnBoardIndicator"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SspsecurityMeasuresAppliedIndicator(
+    SspsecurityMeasuresAppliedIndicatorType
+):
+    class Meta:
+        name = "SSPSecurityMeasuresAppliedIndicator"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SalesOrderId(SalesOrderIdtype):
+    class Meta:
+        name = "SalesOrderID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SalesOrderLineId(SalesOrderLineIdtype):
+    class Meta:
+        name = "SalesOrderLineID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SalinityMeasure(SalinityMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SanitaryMeasureTypeCode(SanitaryMeasureTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SanitaryMeasuresAppliedIndicator(SanitaryMeasuresAppliedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SaturdayAvailabilityIndicator(SaturdayAvailabilityIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SchemaUri(SchemaUritype):
+    class Meta:
+        name = "SchemaURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SchemeUri(SchemeUritype):
+    class Meta:
+        name = "SchemeURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ScoreNumeric(ScoreNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ScoringSystemCode(ScoringSystemCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SeaHeightMeasure(SeaHeightMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SealIssuerTypeCode(SealIssuerTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SealStatusCode(SealStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SealingPartyType(SealingPartyTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SecurityClassificationCode(SecurityClassificationCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SecurityId(SecurityIdtype):
+    class Meta:
+        name = "SecurityID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SecurityLevelCode(SecurityLevelCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SegregatedBallastMeasure(SegregatedBallastMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SellerEventId(SellerEventIdtype):
+    class Meta:
+        name = "SellerEventID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SequenceId(SequenceIdtype):
+    class Meta:
+        name = "SequenceID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SequenceNumberId(SequenceNumberIdtype):
+    class Meta:
+        name = "SequenceNumberID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SequenceNumeric(SequenceNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SerialId(SerialIdtype):
+    class Meta:
+        name = "SerialID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SerialNumberId(SerialNumberIdtype):
+    class Meta:
+        name = "SerialNumberID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ServiceInformationPreferenceCode(ServiceInformationPreferenceCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ServiceLevelCode(ServiceLevelCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ServiceName(ServiceNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ServiceNumberCalled(ServiceNumberCalledType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ServiceProviderPartyIndicator(ServiceProviderPartyIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ServiceType(ServiceTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ServiceTypeCode(ServiceTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SettlementDiscountAmount(SettlementDiscountAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SettlementDiscountPercent(SettlementDiscountPercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SharesNumberQuantity(SharesNumberQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ShipConfigurationCode(ShipConfigurationCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ShipmentStageType(ShipmentStageTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ShipmentStageTypeCode(ShipmentStageTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ShippingMarks(ShippingMarksType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ShippingOrderId(ShippingOrderIdtype):
+    class Meta:
+        name = "ShippingOrderID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ShippingPriorityLevelCode(ShippingPriorityLevelCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ShipsRequirements(ShipsRequirementsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ShortQuantity(ShortQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ShortageActionCode(ShortageActionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SickAnimalDescription(SickAnimalDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SickAnimalOnBoardIndicator(SickAnimalOnBoardIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SignatureId(SignatureIdtype):
+    class Meta:
+        name = "SignatureID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SignatureMethod(SignatureMethodType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SizeTypeCode(SizeTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SocialMediaTypeCode(SocialMediaTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SoleProprietorshipIndicator(SoleProprietorshipIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SourceCurrencyBaseRate(SourceCurrencyBaseRateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SourceCurrencyCode(SourceCurrencyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SourceForecastIssueDate(SourceForecastIssueDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SourceForecastIssueTime(SourceForecastIssueTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SourceValueMeasure(SourceValueMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SpecialFormDescription(SpecialFormDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SpecialInstructions(SpecialInstructionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SpecialSecurityIndicator(SpecialSecurityIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SpecialServiceInstructions(SpecialServiceInstructionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SpecialTerms(SpecialTermsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SpecialTransportRequirements(SpecialTransportRequirementsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SpecificationId(SpecificationIdtype):
+    class Meta:
+        name = "SpecificationID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SpecificationTypeCode(SpecificationTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SpeedOverGroundMeasure(SpeedOverGroundMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SplitConsignmentIndicator(SplitConsignmentIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class StartDate(StartDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class StartTime(StartTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class StatementTypeCode(StatementTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Status(StatusType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class StatusAvailableIndicator(StatusAvailableIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class StatusCode(StatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class StatusReason(StatusReasonType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class StatusReasonCode(StatusReasonCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class StillIllIndicator(StillIllIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class StillOnBoardIndicator(StillOnBoardIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class StowagePositionId(StowagePositionIdtype):
+    class Meta:
+        name = "StowagePositionID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class StowawayDescription(StowawayDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class StowawaysFoundOnBoardIndicator(StowawaysFoundOnBoardIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class StreetName(StreetNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SubTypeCode(SubTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SubTypeDescription(SubTypeDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SubcontractingConditionsCode(SubcontractingConditionsCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Subject(SubjectType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SubjectCode(SubjectCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SubmissionDate(SubmissionDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SubmissionDueDate(SubmissionDueDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SubmissionMethodCode(SubmissionMethodCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SubscriberId(SubscriberIdtype):
+    class Meta:
+        name = "SubscriberID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SubscriberType(SubscriberTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SubscriberTypeCode(SubscriberTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SubstitutionStatusCode(SubstitutionStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SuccessiveSequenceId(SuccessiveSequenceIdtype):
+    class Meta:
+        name = "SuccessiveSequenceID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SummaryDescription(SummaryDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SundayAvailabilityIndicator(SundayAvailabilityIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SupplierAssignedAccountId(SupplierAssignedAccountIdtype):
+    class Meta:
+        name = "SupplierAssignedAccountID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SupplyChainActivityTypeCode(SupplyChainActivityTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class SupplyTypeCode(SupplyTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TankId(TankIdtype):
+    class Meta:
+        name = "TankID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TankTypeCode(TankTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TanksExchangedQuantity(TanksExchangedQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TanksInBallastQuantity(TanksInBallastQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TanksNotExchangedQuantity(TanksNotExchangedQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TareWeightMeasure(TareWeightMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TargetCurrencyBaseRate(TargetCurrencyBaseRateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TargetCurrencyCode(TargetCurrencyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TargetInventoryQuantity(TargetInventoryQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TargetServicePercent(TargetServicePercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TariffClassCode(TariffClassCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TariffCode(TariffCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TariffDescription(TariffDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxAmount(TaxAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxCurrencyCode(TaxCurrencyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxEnergyAmount(TaxEnergyAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxEnergyBalanceAmount(TaxEnergyBalanceAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxEnergyOnAccountAmount(TaxEnergyOnAccountAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxEvidenceIndicator(TaxEvidenceIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxExclusiveAmount(TaxExclusiveAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxExemptionReason(TaxExemptionReasonType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxExemptionReasonCode(TaxExemptionReasonCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxIncludedIndicator(TaxIncludedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxInclusiveAmount(TaxInclusiveAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxInclusiveLineExtensionAmount(TaxInclusiveLineExtensionAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxInclusivePriceAmount(TaxInclusivePriceAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxLevelCode(TaxLevelCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxPointDate(TaxPointDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxTypeCode(TaxTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TaxableAmount(TaxableAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TechnicalCommitteeDescription(TechnicalCommitteeDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TechnicalName(TechnicalNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TelecommunicationsServiceCall(TelecommunicationsServiceCallType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TelecommunicationsServiceCallCode(TelecommunicationsServiceCallCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TelecommunicationsServiceCategory(TelecommunicationsServiceCategoryType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TelecommunicationsServiceCategoryCode(
+    TelecommunicationsServiceCategoryCodeType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TelecommunicationsSupplyType(TelecommunicationsSupplyTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TelecommunicationsSupplyTypeCode(TelecommunicationsSupplyTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Telefax(TelefaxType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Telephone(TelephoneType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TenderEnvelopeId(TenderEnvelopeIdtype):
+    class Meta:
+        name = "TenderEnvelopeID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TenderEnvelopeTypeCode(TenderEnvelopeTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TenderLanguageLocaleCode(TenderLanguageLocaleCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TenderResultCode(TenderResultCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TenderTypeCode(TenderTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TendererRequirementTypeCode(TendererRequirementTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TendererRoleCode(TendererRoleCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TerminatedIndicator(TerminatedIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TestIndicator(TestIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TestMethod(TestMethodType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Text(TextType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ThirdPartyPayerIndicator(ThirdPartyPayerIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ThresholdAmount(ThresholdAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ThresholdQuantity(ThresholdQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ThresholdValueComparisonCode(ThresholdValueComparisonCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ThursdayAvailabilityIndicator(ThursdayAvailabilityIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TierRange(TierRangeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TierRatePercent(TierRatePercentType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TimeAmount(TimeAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TimeBasisCode(TimeBasisCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TimeDeltaDaysQuantity(TimeDeltaDaysQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TimeFrequencyCode(TimeFrequencyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TimezoneOffset(TimezoneOffsetType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TimingComplaint(TimingComplaintType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TimingComplaintCode(TimingComplaintCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Title(TitleType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ToBeDeliveredMeasure(ToBeDeliveredMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ToOrderIndicator(ToOrderIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalAmount(TotalAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalBalanceAmount(TotalBalanceAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalBallastTanksOnBoardQuantity(TotalBallastTanksOnBoardQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalBallastWaterCapacityMeasure(TotalBallastWaterCapacityMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalBallastWaterOnBoardMeasure(TotalBallastWaterOnBoardMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalConsumedQuantity(TotalConsumedQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalCreditAmount(TotalCreditAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalDeadPersonQuantity(TotalDeadPersonQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalDebitAmount(TotalDebitAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalDeliveredQuantity(TotalDeliveredQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalGoodsItemQuantity(TotalGoodsItemQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalIllPersonQuantity(TotalIllPersonQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalInvoiceAmount(TotalInvoiceAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalMeteredQuantity(TotalMeteredQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalPackageQuantity(TotalPackageQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalPackagesQuantity(TotalPackagesQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalPaymentAmount(TotalPaymentAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalTaskAmount(TotalTaskAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalTaxAmount(TotalTaxAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TotalTransportHandlingUnitQuantity(
+    TotalTransportHandlingUnitQuantityType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TraceId(TraceIdtype):
+    class Meta:
+        name = "TraceID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TrackingDeviceCode(TrackingDeviceCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TrackingId(TrackingIdtype):
+    class Meta:
+        name = "TrackingID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TradeItemPackingLabelingTypeCode(TradeItemPackingLabelingTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TradeServiceCode(TradeServiceCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TradingRestrictions(TradingRestrictionsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TrailerLicensePlateId(TrailerLicensePlateIdtype):
+    class Meta:
+        name = "TrailerLicensePlateID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TrainId(TrainIdtype):
+    class Meta:
+        name = "TrainID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransactionCurrencyTaxAmount(TransactionCurrencyTaxAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransactionDate(TransactionDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransactionId(TransactionIdtype):
+    class Meta:
+        name = "TransactionID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransactionTime(TransactionTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransitDescription(TransitDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransitDirectionCode(TransitDirectionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TranslationTypeCode(TranslationTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportAuthorizationCode(TransportAuthorizationCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportEmergencyCardCode(TransportEmergencyCardCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportEquipmentTypeCode(TransportEquipmentTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportEventTypeCode(TransportEventTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportExecutionPlanReferenceId(TransportExecutionPlanReferenceIdtype):
+    class Meta:
+        name = "TransportExecutionPlanReferenceID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportExecutionStatusCode(TransportExecutionStatusCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportHandlingUnitTypeCode(TransportHandlingUnitTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportIndexNumeric(TransportIndexNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportMeansTypeCode(TransportMeansTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportModeCode(TransportModeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportServiceCode(TransportServiceCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportServiceProviderRemarks(TransportServiceProviderRemarksType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportServiceProviderSpecialTerms(
+    TransportServiceProviderSpecialTermsType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportUserRemarks(TransportUserRemarksType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportUserSpecialTerms(TransportUserSpecialTermsType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportationServiceDescription(TransportationServiceDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportationServiceDetailsUri(TransportationServiceDetailsUritype):
+    class Meta:
+        name = "TransportationServiceDetailsURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TransportationStatusTypeCode(TransportationStatusTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TreatmentPathwayCode(TreatmentPathwayCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TuesdayAvailabilityIndicator(TuesdayAvailabilityIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TunnelRestrictionCode(TunnelRestrictionCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TypeCode(TypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class TypeId(TypeIdtype):
+    class Meta:
+        name = "TypeID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class UblversionId(UblversionIdtype):
+    class Meta:
+        name = "UBLVersionID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Undgcode(UndgcodeType):
+    class Meta:
+        name = "UNDGCode"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class UnpackingGroup(UnpackingGroupType):
+    class Meta:
+        name = "UNPackingGroup"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class UnpackingGroupCode(UnpackingGroupCodeType):
+    class Meta:
+        name = "UNPackingGroupCode"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Uri(Uritype):
+    class Meta:
+        name = "URI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Uuid(Uuidtype):
+    class Meta:
+        name = "UUID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class UnknownPriceIndicator(UnknownPriceIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class UpperOrangeHazardPlacardId(UpperOrangeHazardPlacardIdtype):
+    class Meta:
+        name = "UpperOrangeHazardPlacardID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class UrgencyCode(UrgencyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class UtilityStatementTypeCode(UtilityStatementTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValidIsscindicator(ValidIsscindicatorType):
+    class Meta:
+        name = "ValidISSCIndicator"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValidSanitationCertificateOnBoardIndicator(
+    ValidSanitationCertificateOnBoardIndicatorType
+):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValidateProcess(ValidateProcessType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValidateTool(ValidateToolType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValidateToolVersion(ValidateToolVersionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValidatedCriterionPropertyId(ValidatedCriterionPropertyIdtype):
+    class Meta:
+        name = "ValidatedCriterionPropertyID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValidationDate(ValidationDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValidationResultCode(ValidationResultCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValidationTime(ValidationTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValidatorId(ValidatorIdtype):
+    class Meta:
+        name = "ValidatorID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValidityStartDate(ValidityStartDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Value(ValueType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValueAmount(ValueAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValueBaseMeasure(ValueBaseMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValueCurrencyCode(ValueCurrencyCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValueDataTypeCode(ValueDataTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValueFactorNumeric(ValueFactorNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValueMeasure(ValueMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValueQualifier(ValueQualifierType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValueQuantity(ValueQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class ValueUnitCode(ValueUnitCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class VarianceQuantity(VarianceQuantityType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class VariantConstraintCode(VariantConstraintCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class VariantConstraintIndicator(VariantConstraintIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class VariantId(VariantIdtype):
+    class Meta:
+        name = "VariantID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class VersionId(VersionIdtype):
+    class Meta:
+        name = "VersionID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class VesselId(VesselIdtype):
+    class Meta:
+        name = "VesselID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class VesselName(VesselNameType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class VisitDate(VisitDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class VolumeMeasure(VolumeMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WarrantyInformation(WarrantyInformationType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WasteMeasure(WasteMeasureType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WasteMovementTypeCode(WasteMovementTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WasteNotificationTypeCode(WasteNotificationTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WasteTypeCode(WasteTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WasteTypeDescription(WasteTypeDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WaybillTypeCode(WaybillTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WebSiteTypeCode(WebSiteTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WebsiteUri(WebsiteUritype):
+    class Meta:
+        name = "WebsiteURI"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WednesdayAvailabilityIndicator(WednesdayAvailabilityIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WeekDayCode(WeekDayCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WeighingDate(WeighingDateType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WeighingDeviceId(WeighingDeviceIdtype):
+    class Meta:
+        name = "WeighingDeviceID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WeighingDeviceType(WeighingDeviceTypeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WeighingMethodCode(WeighingMethodCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WeighingTime(WeighingTimeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Weight(WeightType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WeightNumeric(WeightNumericType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WeightScoringMethodologyNote(WeightScoringMethodologyNoteType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WeightStatementTypeCode(WeightStatementTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WeightingAlgorithmCode(WeightingAlgorithmCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WeightingConsiderationDescription(WeightingConsiderationDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WeightingTypeCode(WeightingTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WithdrawOfferIndicator(WithdrawOfferIndicatorType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WithholdingTaxTotalAmount(WithholdingTaxTotalAmountType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WorkItemDescription(WorkItemDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WorkItemId(WorkItemIdtype):
+    class Meta:
+        name = "WorkItemID"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WorkPhase(WorkPhaseType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WorkPhaseCode(WorkPhaseCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WorkTypeCode(WorkTypeCodeType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class WorkTypeDescription(WorkTypeDescriptionType):
+    class Meta:
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+
+
+@dataclass(kw_only=True)
+class Xpath(XpathType):
+    class Meta:
+        name = "XPath"
+        namespace = "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
