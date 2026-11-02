@@ -65,6 +65,8 @@ invoice = ubl_bindings.parse(xml, release="2.1")
 
 A new version of this library can add a new UBL release. Then the default release changes, and `parse()` returns classes from a different package. If your code depends on the classes of one release, give `release=`.
 
+The first call of `parse()` for a release takes about a second, because it imports the generated classes of the release. Later calls take about 30 ms for a typical invoice.
+
 ### Read a document that is not valid
 
 By default, `parse()` is strict. It raises `ValueError` if the document does not fit the classes, for example if a mandatory element is missing or an element is unknown. Strict parsing is not a full validation. For example, it accepts elements in the wrong order. Use `validate()` to find all errors.

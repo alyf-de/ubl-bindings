@@ -37,6 +37,9 @@ def parse(xml: bytes, release: str = LATEST, strict: bool = True) -> Any:
 
     A release can read the documents of all older 2.x releases.
 
+    The first call for a release takes about a second, because it imports the generated classes
+    of the release. Later calls are fast.
+
     strict=True raises ValueError if the document does not fit the classes: a mandatory element
     is missing, an element or attribute is unknown, or a value cannot be converted.
 
@@ -73,12 +76,13 @@ class _Release:
             raise ValueError(f"Unsupported UBL release {version!r}. Supported: {', '.join(RELEASES)}")
 
         self.version = version
-        self.bindings = importlib.import_module(f"ubl_bindings.v{version.replace('.', '_')}")
         self.schema_dir = Path(__file__).parent / "schemas" / version / "xsd"
 
     def parse(self, xml: bytes, strict: bool) -> Any:
         document_name = etree.QName(_parse_root(xml)).localname
-        document_class = getattr(self.bindings, document_name)
+        # Python keeps imported modules, so only the first call pays for the import.
+        bindings = importlib.import_module(f"ubl_bindings.v{self.version.replace('.', '_')}")
+        document_class = getattr(bindings, document_name)
         config = _STRICT if strict else _BEST_EFFORT
         return XmlParser(config=config).from_bytes(xml, document_class)
 
@@ -156,5 +160,5 @@ _BEST_EFFORT = ParserConfig(
 
 @cache
 def _load_schema(path: Path) -> etree.XMLSchema:
-    # Loading a UBL schema takes about a second, so we keep each one.
+    # Loading a UBL schema takes about 50 ms, so we keep each one.
     return etree.XMLSchema(etree.parse(str(path)))
