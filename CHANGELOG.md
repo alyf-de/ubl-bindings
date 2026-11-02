@@ -6,10 +6,12 @@ All notable changes to this project are in this file. The format is [Keep a Chan
 
 ### Added
 
-- Best-effort parsing: `parse(source, strict=False)` reads documents that are not valid. Missing mandatory elements become `None`. Unknown elements and attributes are skipped.
+- Best-effort parsing: `parse(xml, strict=False)` reads documents that are not valid. Missing mandatory elements become `None`. Unknown elements and attributes are skipped.
 
 ### Changed
 
+- **Breaking:** `parse()`, `validate()` and `detect_version()` take XML as `bytes` only. They do not read files. A `str` raises `TypeError`. Before, a `str` was a file path.
+- **Breaking:** `to_xml()` returns UTF-8 encoded `bytes`. Before, it returned `str`. Now its output can go directly into `parse()` and `validate()`.
 - **Breaking:** `parse()` is strict by default. It raises `ValueError` for an unknown attribute or a value that cannot be converted. Before, it skipped unknown attributes and kept such values as strings.
 
 ### Fixed

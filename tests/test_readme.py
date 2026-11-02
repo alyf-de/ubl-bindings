@@ -12,7 +12,7 @@ def test_written_document_is_valid():
     namespace = {}
     exec(readme_code("Write a document"), namespace)
 
-    assert ubl_bindings.validate(namespace["xml"].encode()) == []
+    assert ubl_bindings.validate(namespace["xml"]) == []
 
 
 def readme_code(heading: str) -> str:

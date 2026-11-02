@@ -39,12 +39,17 @@ The library supports Python 3.10 and later.
 
 ## Usage
 
+All functions take and return XML as `bytes`. Reading and writing files is up to you.
+
 ### Read a document
 
 ```python
+from pathlib import Path
+
 import ubl_bindings
 
-invoice = ubl_bindings.parse("invoice.xml")
+xml = Path("invoice.xml").read_bytes()
+invoice = ubl_bindings.parse(xml)
 
 print(invoice.id.value)  # "TOSL108"
 print(invoice.legal_monetary_total.payable_amount.value)  # Decimal("729")
@@ -55,7 +60,7 @@ print(invoice.legal_monetary_total.payable_amount.value)  # Decimal("729")
 To use a specific release:
 
 ```python
-invoice = ubl_bindings.parse("invoice.xml", release="2.1")
+invoice = ubl_bindings.parse(xml, release="2.1")
 ```
 
 A new version of this library can add a new UBL release. Then the default release changes, and `parse()` returns classes from a different package. If your code depends on the classes of one release, give `release=`.
@@ -67,7 +72,7 @@ By default, `parse()` is strict. It raises `ValueError` if the document does not
 To read as much as possible from a document that is not valid, for example a received invoice, use best-effort mode:
 
 ```python
-invoice = ubl_bindings.parse("invoice.xml", strict=False)
+invoice = ubl_bindings.parse(xml, strict=False)
 ```
 
 In best-effort mode:
@@ -117,12 +122,12 @@ invoice = Invoice(
 xml = ubl_bindings.to_xml(invoice)
 ```
 
-`to_xml()` uses the usual prefixes `cac`, `cbc` and `ext`.
+`to_xml()` returns UTF-8 encoded bytes with the usual prefixes `cac`, `cbc` and `ext`. To write a file, use `Path("invoice.xml").write_bytes(xml)`.
 
 ### Validate a document
 
 ```python
-errors = ubl_bindings.validate("invoice.xml")  # [] if the document is valid
+errors = ubl_bindings.validate(xml)  # [] if the document is valid
 ```
 
 The validation uses the XSD schemas only. It does not check business rules.
@@ -132,7 +137,7 @@ The validation uses the XSD schemas only. It does not check business rules.
 All UBL 2.x releases use the same XML namespaces. A document can state its release in the optional `cbc:UBLVersionID` element:
 
 ```python
-ubl_bindings.detect_version("invoice.xml")  # "2.1", or None if the element is missing
+ubl_bindings.detect_version(xml)  # "2.1", or None if the element is missing
 ```
 
 ### Export changes the form of some values

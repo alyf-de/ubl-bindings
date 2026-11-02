@@ -43,7 +43,7 @@ def test_round_trip(release: str, path: Path):
     source = path.read_bytes()
 
     document = ubl_bindings.parse(source, release=release)
-    output = ubl_bindings.to_xml(document).encode()
+    output = ubl_bindings.to_xml(document)
 
     assert ubl_bindings.validate(output, release=release) == []
     assert content_lines(output) == content_lines(source)

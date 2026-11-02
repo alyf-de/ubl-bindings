@@ -2,12 +2,13 @@
 
 The generated classes for each release are in `ubl_bindings.v2_1`, `ubl_bindings.v2_5`, ...
 This module adds shortcuts for the common tasks.
+
+All functions take and return XML as bytes. Reading and writing files is up to the caller.
 """
 
 import dataclasses
 import importlib
 from functools import cache
-from os import PathLike
 from pathlib import Path
 
 from lxml import etree
@@ -27,10 +28,8 @@ PREFIXES = {
     "ext": UBL_NAMESPACE_PREFIX + "CommonExtensionComponents-2",
 }
 
-Source = str | PathLike | bytes
 
-
-def parse(source: Source, release: str = LATEST, strict: bool = True):
+def parse(xml: bytes, release: str = LATEST, strict: bool = True):
     """Parse a UBL document into an instance of the class for its root element.
 
     A release can read the documents of all older 2.x releases.
@@ -41,24 +40,25 @@ def parse(source: Source, release: str = LATEST, strict: bool = True):
     strict=False parses as much as possible. A missing mandatory element becomes None. Unknown
     elements and attributes are skipped. A value that cannot be converted stays a string.
     """
-    return Release(release).parse(source, strict)
+    return Release(release).parse(xml, strict)
 
 
-def validate(source: Source, release: str = LATEST) -> list[str]:
+def validate(xml: bytes, release: str = LATEST) -> list[str]:
     """Validate a UBL document against the XSD schemas. Return the errors."""
-    return Release(release).validate(source)
+    return Release(release).validate(xml)
 
 
-def to_xml(document) -> str:
-    """Export a document to XML, with the usual UBL namespace prefixes."""
+def to_xml(document) -> bytes:
+    """Export a document to UTF-8 encoded XML, with the usual UBL namespace prefixes."""
     document_namespace = type(document).Meta.namespace
     serializer = XmlSerializer(config=SerializerConfig(indent="  "))
-    return serializer.render(document, ns_map={None: document_namespace, **PREFIXES})
+    xml = serializer.render(document, ns_map={None: document_namespace, **PREFIXES})
+    return xml.encode()
 
 
-def detect_version(source: Source) -> str | None:
+def detect_version(xml: bytes) -> str | None:
     """Return the value of cbc:UBLVersionID, or None if the document has none."""
-    version_id = parse_root(read(source)).findtext(f"{{{CBC}}}UBLVersionID")
+    version_id = parse_root(xml).findtext(f"{{{CBC}}}UBLVersionID")
     return version_id.strip() if version_id else None
 
 
@@ -73,15 +73,14 @@ class Release:
         self.bindings = importlib.import_module(f"ubl_bindings.v{version.replace('.', '_')}")
         self.schema_dir = Path(__file__).parent / "schemas" / version / "xsd"
 
-    def parse(self, source: Source, strict: bool):
-        data = read(source)
-        document_name = etree.QName(parse_root(data)).localname
+    def parse(self, xml: bytes, strict: bool):
+        document_name = etree.QName(parse_root(xml)).localname
         document_class = getattr(self.bindings, document_name)
         config = STRICT if strict else BEST_EFFORT
-        return XmlParser(config=config).from_bytes(data, document_class)
+        return XmlParser(config=config).from_bytes(xml, document_class)
 
-    def validate(self, source: Source) -> list[str]:
-        root = parse_root(read(source))
+    def validate(self, xml: bytes) -> list[str]:
+        root = parse_root(xml)
         schema = self.schema(etree.QName(root).localname)
         if schema.validate(root):
             return []
@@ -92,15 +91,12 @@ class Release:
         return load_schema(self.schema_dir / "maindoc" / f"UBL-{document_name}-{self.version}.xsd")
 
 
-def read(source: Source) -> bytes:
-    if isinstance(source, bytes):
-        return source
+def parse_root(xml: bytes) -> etree._Element:
+    # Without this check, lxml would read a path or text as broken XML, with a confusing error.
+    if not isinstance(xml, bytes):
+        raise TypeError(f"Expected XML as bytes, got {type(xml).__name__}. Read files with Path.read_bytes().")
 
-    return Path(source).read_bytes()
-
-
-def parse_root(data: bytes) -> etree._Element:
-    root = etree.fromstring(data)
+    root = etree.fromstring(xml)
     if not root.tag.startswith("{" + UBL_NAMESPACE_PREFIX):
         raise ValueError(f"Not a UBL document. Root element: {root.tag}")
 

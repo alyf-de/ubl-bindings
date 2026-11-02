@@ -6,7 +6,7 @@ from xsdata.exceptions import ConverterWarning
 import ubl_bindings
 from ubl_bindings.v2_1 import Invoice
 
-INVOICE_2_1 = Path(__file__).parent / "examples" / "2.1" / "UBL-Invoice-2.1-Example.xml"
+INVOICE_2_1 = (Path(__file__).parent / "examples" / "2.1" / "UBL-Invoice-2.1-Example.xml").read_bytes()
 
 
 def test_parse_returns_class_of_root_element():
@@ -22,7 +22,7 @@ def test_detect_version():
 
 def test_validate_reports_missing_element():
     # cbc:ID is mandatory in an invoice.
-    xml = INVOICE_2_1.read_bytes().replace(b"<cbc:ID>TOSL108</cbc:ID>", b"", 1)
+    xml = INVOICE_2_1.replace(b"<cbc:ID>TOSL108</cbc:ID>", b"", 1)
 
     errors = ubl_bindings.validate(xml, release="2.1")
 
@@ -62,11 +62,11 @@ def test_best_effort_parse_reads_document_that_does_not_fit():
     assert invoice.issue_date is None
     assert invoice.tax_total[0].tax_amount.currency_id is None
     assert invoice.tax_total[0].tax_amount.value == "abc"
-    assert ubl_bindings.validate(ubl_bindings.to_xml(invoice).encode(), release="2.1") != []
+    assert ubl_bindings.validate(ubl_bindings.to_xml(invoice), release="2.1") != []
 
 
 def broken_invoice(*changes: tuple[bytes, bytes]) -> bytes:
-    xml = INVOICE_2_1.read_bytes()
+    xml = INVOICE_2_1
     for old, new in changes:
         assert old in xml
         xml = xml.replace(old, new, 1)
@@ -77,6 +77,20 @@ def broken_invoice(*changes: tuple[bytes, bytes]) -> bytes:
 def test_parse_rejects_other_xml():
     with pytest.raises(ValueError, match="Not a UBL document"):
         ubl_bindings.parse(b"<html/>")
+
+
+@pytest.mark.parametrize("xml", ["invoice.xml", INVOICE_2_1.decode()], ids=["path", "text"])
+def test_functions_take_bytes_only(xml):
+    with pytest.raises(TypeError, match="Expected XML as bytes, got str"):
+        ubl_bindings.parse(xml)
+
+
+def test_to_xml_returns_bytes_that_parse_reads():
+    invoice = ubl_bindings.parse(INVOICE_2_1, release="2.1")
+
+    xml = ubl_bindings.to_xml(invoice)
+
+    assert ubl_bindings.parse(xml, release="2.1") == invoice
 
 
 def test_unsupported_release():
