@@ -14,7 +14,7 @@ from xsdata.formats.dataclass.parsers import XmlParser
 from xsdata.formats.dataclass.serializers import XmlSerializer
 from xsdata.formats.dataclass.serializers.config import SerializerConfig
 
-RELEASES = ("2.1", "2.5")
+RELEASES = ("2.1", "2.2", "2.3", "2.4", "2.5")
 LATEST = RELEASES[-1]
 
 UBL_NAMESPACE_PREFIX = "urn:oasis:names:specification:ubl:schema:xsd:"

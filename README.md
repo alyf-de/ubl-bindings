@@ -7,7 +7,7 @@ Python data bindings for all [UBL](https://www.oasis-open.org/committees/ubl/) d
 ## Why this library
 
 - **All document types.** UBL 2.1 has 65 document types and UBL 2.5 has 101. All of them are supported, not only the **Invoice** and the **Credit Note**. This includes, for example, **Order**, **Despatch Advice** and **Catalogue**.
-- **More than one release.** UBL 2.1 and UBL 2.5 are supported. To add a release, generate its code and run the tests.
+- **All current releases.** UBL 2.1, 2.2, 2.3, 2.4 and 2.5 are supported. To add a release, generate its code and run the tests.
 - **Complete.** Each element and attribute of the schemas has a field in a class. Data that a hand-written model does not know is not lost.
 - **Tested with the official examples.** Each example document of each release is parsed, exported, validated and compared with the input.
 - **XSD validation included.** The schemas are part of the package.
@@ -20,9 +20,12 @@ The classes are close to the schemas. Thus the API is more verbose than the API 
 | Release | Status         | Document types | Python package         | Specification                                                |
 | ------- | -------------- | -------------- | ---------------------- | ------------------------------------------------------------ |
 | 2.1     | OASIS Standard | 65             | `ubl_bindings.v2_1`    | [UBL-2.1.html](https://docs.oasis-open.org/ubl/UBL-2.1.html) |
+| 2.2     | OASIS Standard | 81             | `ubl_bindings.v2_2`    | [UBL-2.2.html](https://docs.oasis-open.org/ubl/UBL-2.2.html) |
+| 2.3     | OASIS Standard | 91             | `ubl_bindings.v2_3`    | [UBL-2.3.html](https://docs.oasis-open.org/ubl/UBL-2.3.html) |
+| 2.4     | OASIS Standard | 93             | `ubl_bindings.v2_4`    | [UBL-2.4.html](https://docs.oasis-open.org/ubl/UBL-2.4.html) |
 | 2.5     | OASIS Standard | 101            | `ubl_bindings.v2_5`    | [UBL-2.5.html](https://docs.oasis-open.org/ubl/UBL-2.5.html) |
 
-Other 2.x releases (2.2, 2.3, 2.4) use the same process. We add them when a user needs them.
+UBL 2.0 is not supported. Each release from 2.1 on can read UBL 2.0 documents.
 
 ## Installation
 
@@ -140,8 +143,10 @@ ubl-bindings/
 │   ├── __init__.py       # parse, validate, to_xml, detect_version (hand-written)
 │   ├── schemas/
 │   │   ├── 2.1/xsd/      # XSD files from the official release ZIP
+│   │   ├── ...
 │   │   └── 2.5/xsd/
 │   ├── v2_1/             # generated code for UBL 2.1
+│   ├── ...
 │   └── v2_5/             # generated code for UBL 2.5
 ├── .xsdata.xml           # generator configuration
 ├── scripts/
